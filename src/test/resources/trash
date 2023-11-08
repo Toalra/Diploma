@@ -1,0 +1,13 @@
+//        LocalDate startDate = LocalDate.now();
+//        LocalDate endDate = LocalDate.of(2024, 12, 31);
+
+       //Faker fakerStartDate = new Faker();
+
+      //  DateAndTime randomDate = fakerStartDate.date();
+//
+//        DateTimeFormatter startDateFormat = DateTimeFormatter.ofPattern("dd.MM.yyyy");
+//       // DateFormat startDateFormat = new SimpleDateFormat("dd.MM.yyyy");
+//        String formattedRandomDate = startDateFormat.format(startDate);
+//
+//        DateTimeFormatter endDateFormat = DateTimeFormatter.ofPattern("dd.MM.yyyy");
+//        String formattedEndDate = endDateFormat.format(endDate);
