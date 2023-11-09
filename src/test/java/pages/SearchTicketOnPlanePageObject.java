@@ -19,6 +19,7 @@ public class SearchTicketOnPlanePageObject {
             dataBack = $(".j-date_back"),
             resultLine = $(".o-text-inline"),
             searchedLine = $("[data-ti='searchPanel']").$(".o-text-headerSmall-md"),
+
             child = $(".counter_child_wrp").$(".increase"),
             typeTicket = $("._small"),
             listType = $(".list"),
@@ -36,12 +37,11 @@ public class SearchTicketOnPlanePageObject {
             addData = $(".j-last_row").$(".j-date_input"),
             addFlight = $(".j-add_flight_button"),
             exampleCityFrom = $(".j-city_from_pseudo_container").$(".j-pseudo"),
-            exampleCityTo = $("j-city_to_pseudo_container").$(".j-pseudo"),
+            exampleCityTo = $(".j-city_to_pseudo_container").$(".j-pseudo"),
             checkTypeTicket = $(".o-popper-popupContentBottomSlot").$(".o-text-paragraphSmall");
 
     public SearchTicketOnPlanePageObject openPage() {
         open("https://www.tutu.ru/");
-//        $(".style__agree").click();
 
         return this;
     }
@@ -172,8 +172,8 @@ public class SearchTicketOnPlanePageObject {
         return this;
     }
 
-    public SearchTicketOnPlanePageObject searchedLine(String value) {
-        searchedLine.getValue(cityFrom);
+    public SearchTicketOnPlanePageObject searchedLine() {
+        searchedLine.getValue();
         return this;
     }
 }

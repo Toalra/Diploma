@@ -9,7 +9,6 @@ import java.time.format.DateTimeFormatter;
 import java.util.Locale;
 
 import static io.qameta.allure.Allure.step;
-import static org.junit.jupiter.params.shadow.com.univocity.parsers.annotations.helpers.AnnotationRegistry.getValue;
 import static utils.RandomTypeTicket.standart;
 
 public class SearchTicketsOnPlaneTest extends TestBase {
@@ -132,7 +131,7 @@ public class SearchTicketsOnPlaneTest extends TestBase {
         });
         step("Проверка билетов с городами из примера", () -> {
             searchTicketsWithExampleCities
-                    .searchedLine(getValue(cityFrom));
+                    .searchedLine();
         });
     }
 
