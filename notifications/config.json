@@ -1,0 +1,17 @@
+{
+  "base": {
+    "logo": "",
+    "project": "Home work 15 - Telegram bot",
+    "environment": "TEST",
+    "comment": "Thank you for watching",
+    "reportLink": "https://jenkins.autotests.cloud/job/dats.team_autotesting_tokareva_aliya",
+    "language": "ru",
+    "allureFolder": "build/reports/allure-report/allureReport",
+    "enableChart": true
+  },
+  "telegram": {
+    "token": "6565795453:AAGaXmaLQBs6bgdp0CpW6x5VQvRmrzoPWEQ",
+    "chat": "-1001859402124",
+    "replyTo": ""
+  }
+}
