@@ -6,7 +6,7 @@
     "comment": "Thank you for watching",
     "reportLink": "https://jenkins.autotests.cloud/job/diploma_tokareva",
     "language": "ru",
-    "allureFolder": "build/reports",
+    "allureFolder": "build/reports/allure-report/allureReport",
     "enableChart": true
   },
   "telegram": {

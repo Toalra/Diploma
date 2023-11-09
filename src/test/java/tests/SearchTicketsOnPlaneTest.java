@@ -35,6 +35,7 @@ public class SearchTicketsOnPlaneTest extends TestBase {
 
 
     @Test
+
     void searchTickets() {
         step("Поиск билетов на самолет за промежуток времени", () -> {
         searchTickets
