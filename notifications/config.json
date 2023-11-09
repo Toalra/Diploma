@@ -1,12 +1,12 @@
 {
   "base": {
     "logo": "",
-    "project": "Home work 15 - Telegram bot",
+    "project": "Diploma - Telegram bot",
     "environment": "TEST",
     "comment": "Thank you for watching",
-    "reportLink": "https://jenkins.autotests.cloud/job/dats.team_autotesting_tokareva_aliya",
+    "reportLink": "https://jenkins.autotests.cloud/job/diploma_tokareva",
     "language": "ru",
-    "allureFolder": "build/reports/allure-report/allureReport",
+    "allureFolder": "build/reports",
     "enableChart": true
   },
   "telegram": {
