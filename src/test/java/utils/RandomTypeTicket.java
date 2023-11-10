@@ -6,7 +6,7 @@ public class RandomTypeTicket {
     public static String
     standart = randomTypeTicket();
     public static String randomTypeTicket() {
-        String[] standart = {"Эконом", "Бизнес", "Первый"};
+        String[] standart = {"Бизнес", "Первый", "Эконом"};
         return new Faker().options().option(standart);
     }
 }
