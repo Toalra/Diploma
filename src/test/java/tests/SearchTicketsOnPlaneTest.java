@@ -39,8 +39,8 @@ public class SearchTicketsOnPlaneTest extends TestBase {
         searchTickets
             .openPage()
             .avia()
-            .cityFrom("Казань")
-            .cityTo("Москва")
+            .cityFrom(city1)
+            .cityTo(city2)
             .dataFrom(tomorrowString)
             .dataBack(weekString)
             .searchButton()
@@ -49,7 +49,7 @@ public class SearchTicketsOnPlaneTest extends TestBase {
 
         step("Проверка найденных билетов за указанный промежуток времени", () -> {
         searchChildTickets
-            .resultLine("Казань — Москва");
+            .resultLine(city1 + " — " + city2);
         });
     }
 
@@ -59,8 +59,8 @@ public class SearchTicketsOnPlaneTest extends TestBase {
             searchChildTickets
                     .openPage()
                     .avia()
-                    .cityFrom("Казань")
-                    .cityTo("Москва")
+                    .cityFrom(city1)
+                    .cityTo(city2)
                     .dataFrom(tomorrowString)
                     .dataBack(weekString)
                     .child()
@@ -68,9 +68,9 @@ public class SearchTicketsOnPlaneTest extends TestBase {
                     .chooseTicket();
         });
 
-        step("Проверка выбранного билета по указанным параметрам в поиске", () -> {
+        step("Проверка выбранного билета по указанным параметрам в поиске с 1 ребенком", () -> {
             searchChildTickets
-                    .checkCities("Казань — Москва")
+                    .checkCities(city1 + " — " + city2)
                     .checkChild("за двоих");
         });
     }
@@ -81,8 +81,8 @@ public class SearchTicketsOnPlaneTest extends TestBase {
             searchBabyTicket
                     .openPage()
                     .avia()
-                    .cityFrom("Казань")
-                    .cityTo("Москва")
+                    .cityFrom(city1)
+                    .cityTo(city2)
                     .dataFrom(tomorrowString)
                     .dataBack(weekString)
                     .baby()
@@ -90,9 +90,9 @@ public class SearchTicketsOnPlaneTest extends TestBase {
                     .chooseTicket();
         });
 
-        step("Проверка выбранного билета по указанным параметрам в поиске", () -> {
+        step("Проверка найденного билета по указанным параметрам в поиске с 1 малышом", () -> {
             searchBabyTicket
-                    .checkCities("Казань — Москва")
+                    .checkCities(city1 + " — " + city2)
                     .checkBaby("Ручная кладь 10 кг для взрослого, нет для малыша");
         });
     }
@@ -102,19 +102,19 @@ public class SearchTicketsOnPlaneTest extends TestBase {
             searchTicketWithFlight
                     .openPage()
                     .avia()
-                    .cityFrom("Казань")
-                    .cityTo("Москва")
+                    .cityFrom(city1)
+                    .cityTo(city2)
                     .dataFrom(tomorrowString)
                     .addFlight()
-                    .addCityFrom("Москва")
-                    .addCityTo("Казань")
+                    .addCityFrom(city2)
+                    .addCityTo(city1)
                     .addData(weekString)
                     .searchButton()
                     .chooseTicket();
         });
         step("Проверка билетов с перелетом", () -> {
             searchTicketWithFlight
-                     .checkCities("Казань — Москва");
+                     .checkCities(city1 + " — " + city2);
         });
     }
 
@@ -142,8 +142,8 @@ public class SearchTicketsOnPlaneTest extends TestBase {
             searchRandomTypeTicket
                     .openPage()
                     .avia()
-                    .cityFrom("Казань")
-                    .cityTo("Москва")
+                    .cityFrom(city1)
+                    .cityTo(city2)
                     .dataFrom(tomorrowString)
                     .dataBack(weekString)
                     .typeTicket(standart)
