@@ -148,6 +148,7 @@ public class SearchTicketsOnPlaneTest extends TestBase {
         });
     }
 
+    @BeforeSuite
     @Test
     void searchRandomTypeTicket() {
         step("Поиск с рандомным типом билета", () -> {
