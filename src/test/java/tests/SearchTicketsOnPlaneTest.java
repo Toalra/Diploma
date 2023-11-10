@@ -61,7 +61,7 @@ public class SearchTicketsOnPlaneTest extends TestBase {
 
         step("Проверка найденных билетов за указанный промежуток времени", () -> {
         searchChildTickets
-            .resultLine(city1 + " — " + city2);
+            .resultLine("Казань — Москва");
         });
     }
 
