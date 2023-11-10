@@ -125,7 +125,7 @@ public class SearchTicketsOnPlaneTest extends TestBase {
         });
         step("Проверка билетов с перелетом", () -> {
             searchTicketWithFlight
-                     .checkCities("Москва — Казань");
+                     .checkCities("Казань — Москва");
         });
     }
 
