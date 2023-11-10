@@ -3,7 +3,11 @@ package tests;
 import com.github.javafaker.Faker;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
+import org.testng.ITestContext;
+import org.testng.ITestNGMethod;
+import org.testng.annotations.BeforeSuite;
 import pages.SearchTicketOnPlanePageObject;
+import utils.RetryRule;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
@@ -33,16 +37,21 @@ public class SearchTicketsOnPlaneTest extends TestBase {
 
     String city2 = faker.address().cityName();
 
+    @BeforeSuite
+    public void setUp(ITestContext context) {
+        for(ITestNGMethod method : context.getAllTestMethods()){
+            method.setRetryAnalyzerClass(RetryRule.class);
+        }
+    }
 
     @Test
-
     void searchTickets() {
         step("Поиск билетов на самолет за промежуток времени", () -> {
         searchTickets
             .openPage()
             .avia()
-            .cityFrom(city1)
-            .cityTo(city2)
+            .cityFrom("Казань")
+            .cityTo("Москва")
             .dataFrom(tomorrowString)
             .dataBack(weekString)
             .searchButton()
