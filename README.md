@@ -83,10 +83,10 @@ java "-DconfigFile=notifications/config.json" -jar notifications/allure-notifica
 
 <h2><img src="https://github.com/Toalra/Diploma/blob/master/media/logs/Jenkins.svg" wight="30" height="30"/><a>Сборка в </a>
   <a href="https://jenkins.autotests.cloud/job/dats.team_autotesting_tokareva_aliya"> Jenkins</a></h2>
-<a title="jenkinsReport"><img  src="https://github.com/Toalra/DatsTeam_autotesting_tokareva_aliya/blob/master/media/results/jenkinsReport.png" wight="500" height="500"/></a>
+<a title="jenkinsReport"><img  src="https://github.com/Toalra/Diploma/blob/master/media/results/jenkinsCommonResults.png" wight="500" height="500"/></a>
 <h3><a>Overwies в </a>
 <a href="https://jenkins.autotests.cloud/job/dats.team_autotesting_tokareva_aliya/43/allure/">Allure Report</a></h3>
-<a href=""><img  src="https://github.com/Toalra/DatsTeam_autotesting_tokareva_aliya/blob/master/media/results/resultAllure.png" wight="500" height="450"/></a>
+<a href=""><img  src="https://github.com/Toalra/Diploma/blob/master/media/results/jenkinsAllure_diploma.png" wight="500" height="450"/></a>
 
 <h3>Результат выполнения теста</h3>
 <a title="allureResults"><img  src="https://github.com/Toalra/Diploma/blob/master/media/results/jenkinsAllure_diploma_fail.png" wight=800" height="300"/></a>
