@@ -70,8 +70,8 @@ public class SearchTicketsOnPlaneTest extends TestBase {
             searchChildTickets
                     .openPage()
                     .avia()
-                    .cityFrom(city1)
-                    .cityTo(city2)
+                    .cityFrom("Казань")
+                    .cityTo("Москва")
                     .dataFrom(tomorrowString)
                     .dataBack(weekString)
                     .child()
@@ -81,7 +81,7 @@ public class SearchTicketsOnPlaneTest extends TestBase {
 
         step("Проверка выбранного билета по указанным параметрам в поиске", () -> {
             searchChildTickets
-                    .checkCities(city1 + " — " + city2)
+                    .checkCities("Казань — Москва")
                     .checkChild("за двоих");
         });
     }
@@ -92,8 +92,8 @@ public class SearchTicketsOnPlaneTest extends TestBase {
             searchBabyTicket
                     .openPage()
                     .avia()
-                    .cityFrom(city1)
-                    .cityTo(city2)
+                    .cityFrom("Казань")
+                    .cityTo("Москва")
                     .dataFrom(tomorrowString)
                     .dataBack(weekString)
                     .baby()
@@ -103,7 +103,7 @@ public class SearchTicketsOnPlaneTest extends TestBase {
 
         step("Проверка выбранного билета по указанным параметрам в поиске", () -> {
             searchBabyTicket
-                    .checkCities(city1 + " — " + city2)
+                    .checkCities("Казань — Москва")
                     .checkBaby("Ручная кладь 10 кг для взрослого, нет для малыша");
         });
     }
@@ -113,19 +113,19 @@ public class SearchTicketsOnPlaneTest extends TestBase {
             searchTicketWithFlight
                     .openPage()
                     .avia()
-                    .cityFrom(city1)
-                    .cityTo(city2)
+                    .cityFrom("Казань")
+                    .cityTo("Москва")
                     .dataFrom(tomorrowString)
                     .addFlight()
-                    .addCityFrom(city2)
-                    .addCityTo(city1)
+                    .addCityFrom("Москва")
+                    .addCityTo("Казань")
                     .addData(weekString)
                     .searchButton()
                     .chooseTicket();
         });
         step("Проверка билетов с перелетом", () -> {
             searchTicketWithFlight
-                     .checkCities(city2 + " — " + city1);
+                     .checkCities("Москва — Казань");
         });
     }
 
@@ -153,8 +153,8 @@ public class SearchTicketsOnPlaneTest extends TestBase {
             searchRandomTypeTicket
                     .openPage()
                     .avia()
-                    .cityFrom(city1)
-                    .cityTo(city2)
+                    .cityFrom("Казань")
+                    .cityTo("Москва")
                     .dataFrom(tomorrowString)
                     .dataBack(weekString)
                     .typeTicket(standart)
