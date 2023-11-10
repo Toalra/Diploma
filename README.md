@@ -97,8 +97,7 @@ java "-DconfigFile=notifications/config.json" -jar notifications/allure-notifica
   <a href="https://allure.autotests.cloud/launch/30429/tree/485930?treeId=0">Allure TestOps </a></h2>
 
 Сборка имеет интеграцию `Jenkins` с `Allure TestOps`. Результат выполнения автотестов отображается в `Allure TestOps` на `Dashboard` в `Allure TestOps` отображена статистика пройденных тестов.
-<img  src="https://github.com/Toalra/DatsTeam_autotesting_tokareva_aliya/blob/master/media/results/testOpsReults.png" wight="900" height="550"/>
-
+<img  src="https://github.com/Toalra/Diploma/blob/master/media/results/testOpsStatistics.png" wight="900" height="550"/>
 
 <h2><img src="https://github.com/Toalra/Diploma/blob/master/media/logs/Jira.svg" wight="30" height="30"/><a>Интеграция</a>
   <a href="https://github.com/Toalra/Diploma/blob/master/media/results/jira_diploma.png">с Jira</a></h2>
