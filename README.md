@@ -97,7 +97,7 @@ java "-DconfigFile=notifications/config.json" -jar notifications/allure-notifica
 <img  src="https://github.com/Toalra/DatsTeam_autotesting_tokareva_aliya/blob/master/media/results/testOpsReults.png" wight="900" height="550"/>
 
 <h2><img src="https://github.com/Toalra/Diploma/blob/master/media/logs/Jira.svg" wight="30" height="30"/><a>Интеграция</a>
-  <a href="https://jira.autotests.cloud/browse/HOMEWORK-896">с Jira</a></h2>
+  <a href="https://github.com/Toalra/Diploma/blob/master/media/results/jira_diploma.png">с Jira</a></h2>
 
 Выполнена интеграция `Allure TestOps` с `Jira`, в тикете отображается список автотестов и результаты их прогода.
 <img  src="https://github.com/Toalra/DatsTeam_autotesting_tokareva_aliya/blob/master/media/results/jiraResults.png" wight="900" height="500"/>
