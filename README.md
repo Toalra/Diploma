@@ -40,7 +40,12 @@
 
 <h2>🏁 Реализованные проверки</h2>
 
-* 
+* Проверка найденных билетов за указанный промежуток времени
+* Проверка найденного билета по указанным параметрам в поиске с 1 ребенком
+* Проверка найденного билета по указанным параметрам в поиске с 1 малышом
+* Проверка билетов с перелетом
+* Проверка билетов с городами из примера
+* Проверка поиска с рандомным типом билета
 
 <h2>▶️ Запуск автотестов</h2>
 <h3>Запуск автотестов из терминала</h3>
@@ -100,15 +105,15 @@ java "-DconfigFile=notifications/config.json" -jar notifications/allure-notifica
 <img  src="https://github.com/Toalra/Diploma/blob/master/media/results/testOpsStatistics.png" wight="700" height="500"/>
 
 <h2><img src="https://github.com/Toalra/Diploma/blob/master/media/logs/Jira.svg" wight="30" height="30"/><a>Интеграция</a>
-  <a href="https://github.com/Toalra/Diploma/blob/master/media/results/jira_diploma.png">с Jira</a></h2>
+  <a href="https://jira.autotests.cloud/browse/HOMEWORK-947">с Jira</a></h2>
 
 Выполнена интеграция `Allure TestOps` с `Jira`, в тикете отображается список автотестов и результаты их прогода.
-<img  src="https://github.com/Toalra/Diploma/blob/master/media/results/testOps_diploma.png" wight="800" height="600"/>
+<img  src="https://github.com/Toalra/Diploma/blob/master/media/results/jira_diploma.png" wight="800" height="600"/>
 
 <h2><img src="https://github.com/Toalra/Diploma/blob/master/media/logs/Telegram.svg" wight="30" height="30"/>  Краткий отчет в Telegram</h2>
 
 После прогона их `Jenkins` в `Telegram` отправляется уведомление с кратким отчетом результатов пройденного тестирования.
-<a><img  src="https://github.com/Toalra/DatsTeam_autotesting_tokareva_aliya/blob/master/media/results/tgResults.png" wight="500" height="500"/></a>
+<a><img  src="https://github.com/Toalra/Diploma/blob/master/media/results/telegramResults.png" wight="500" height="500"/></a>
 
 <h2><img src="https://github.com/Toalra/DatsTeam_autotesting_tokareva_aliya/blob/master/media/logs/Selenoid.svg" wight="30" height="30"/>Видео  примером запуска</h2>
 
