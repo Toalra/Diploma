@@ -89,7 +89,7 @@ java "-DconfigFile=notifications/config.json" -jar notifications/allure-notifica
 <a href=""><img  src="https://github.com/Toalra/Diploma/blob/master/media/results/jenkinsAllure_diploma.png" wight="500" height="450"/></a>
 
 <h3>Результат выполнения теста</h3>
-<a title="allureResults"><img  src="https://github.com/Toalra/Diploma/blob/master/media/results/jenkinsAllure_diploma_fail.png" wight=800" height="300"/></a>
+<a title="allureResults"><img  src="https://github.com/Toalra/Diploma/blob/master/media/results/jenkinsAllure_diploma_fail.png" wight=700" height="500"/></a>
 
 В случае, если тест упал, то в `Jenkins Allure` сразу отобразится код ошибки, видео падения теста в интерфейсе, последний скриншот, Page source и другие attachmends
 
@@ -97,13 +97,13 @@ java "-DconfigFile=notifications/config.json" -jar notifications/allure-notifica
   <a href="https://allure.autotests.cloud/launch/30429/tree/485930?treeId=0">Allure TestOps </a></h2>
 
 Сборка имеет интеграцию `Jenkins` с `Allure TestOps`. Результат выполнения автотестов отображается в `Allure TestOps` на `Dashboard` в `Allure TestOps` отображена статистика пройденных тестов.
-<img  src="https://github.com/Toalra/Diploma/blob/master/media/results/testOpsStatistics.png" wight="900" height="550"/>
+<img  src="https://github.com/Toalra/Diploma/blob/master/media/results/testOpsStatistics.png" wight="700" height="500"/>
 
 <h2><img src="https://github.com/Toalra/Diploma/blob/master/media/logs/Jira.svg" wight="30" height="30"/><a>Интеграция</a>
   <a href="https://github.com/Toalra/Diploma/blob/master/media/results/jira_diploma.png">с Jira</a></h2>
 
 Выполнена интеграция `Allure TestOps` с `Jira`, в тикете отображается список автотестов и результаты их прогода.
-<img  src="https://github.com/Toalra/Diploma/blob/master/media/results/testOps_diploma.png" wight="900" height="500"/>
+<img  src="https://github.com/Toalra/Diploma/blob/master/media/results/testOps_diploma.png" wight="800" height="600"/>
 
 <h2><img src="https://github.com/Toalra/Diploma/blob/master/media/logs/Telegram.svg" wight="30" height="30"/>  Краткий отчет в Telegram</h2>
 
