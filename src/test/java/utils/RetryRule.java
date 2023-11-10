@@ -3,7 +3,7 @@ package utils;
 import org.testng.IRetryAnalyzer;
 import org.testng.ITestResult;
 public class RetryRule implements IRetryAnalyzer {
-    private int retryCount = 0;
+    private int retryCount = 1;
     private int maxCount = 3;
 
     public RetryRule(int retryCount) {
