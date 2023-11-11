@@ -156,6 +156,7 @@ public class SearchTicketsOnPlaneTest extends TestBase {
     void searchTicketOnEtrain() {
         step("Поик билетов на электричку", () ->{
             searchTicketOnEtrain
+                    .openPage()
                     .etrain()
                     .stationFromEtrain("Казань (Татарстан)")
                     .stationToEtrain("Москва")
