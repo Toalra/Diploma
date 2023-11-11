@@ -18,7 +18,7 @@ public class SearchTicketOnPlanePageObject {
             cityTo = $(".j-city_to"),
             stationTo = $(".j-station_input_to"),
             searchButton = $(".button_wrp"),
-            searchTrainButton = $(".j-button-submit"),
+            searchTrainButton = $(".m-border_inner"),
             dataToTrain = $(".j-date_to"),
             dataFrom = $(".j-date_from"),
             dataBack = $(".j-date_back"),
