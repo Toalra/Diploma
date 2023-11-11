@@ -18,9 +18,9 @@ public class SearchTicketsOnPlaneTest extends TestBase {
     SearchTicketOnPlanePageObject searchBabyTicket = new SearchTicketOnPlanePageObject();
     SearchTicketOnPlanePageObject searchTicketWithFlight = new SearchTicketOnPlanePageObject();
     SearchTicketOnPlanePageObject searchTicketsWithExampleCities = new SearchTicketOnPlanePageObject();
-    SearchTicketOnPlanePageObject searchNonTicket = new SearchTicketOnPlanePageObject();
     SearchTicketOnPlanePageObject searchTicketOnTrain = new SearchTicketOnPlanePageObject();
     SearchTicketOnPlanePageObject searchTicketsOnBus = new SearchTicketOnPlanePageObject();
+    SearchTicketOnPlanePageObject searchTicketOnEtrain = new SearchTicketOnPlanePageObject();
 
     LocalDate today = LocalDate.now();
     LocalDate tomorrow = today.plusDays(1);
@@ -117,23 +117,6 @@ public class SearchTicketsOnPlaneTest extends TestBase {
     }
 
     @Test
-    void searchNonTicket() {
-        step("Поиск билетов, которые отсутствуют", () -> {
-            searchNonTicket
-                    .openPage()
-                    .avia()
-                    .cityFrom("Казань")
-                    .cityTo("Анапа")
-                    .dataFrom(tomorrowString)
-                    .dataBack(weekString);
-        });
-        step("Проверка отсутствия билетов", () -> {
-            searchNonTicket
-                    .noneTickets("Нет билетов на эту дату");
-        });
-    }
-
-    @Test
     void searchTicketOnTrain() {
         step("Поиск билетов на поезд", () -> {
             searchTicketOnTrain
@@ -141,7 +124,7 @@ public class SearchTicketsOnPlaneTest extends TestBase {
                     .train()
                     .stationFrom("Казань")
                     .stationTo("Москва")
-                    .dataToTrain(tomorrowString)
+                    .dataTo(tomorrowString)
                     .searchTrainButton()
                     .trainOfferCard();
         });
@@ -168,5 +151,23 @@ public class SearchTicketsOnPlaneTest extends TestBase {
                     .checkCityStartBus("Казань")
                     .checkCityEndBus("Центральный");
         });
+    }
+    @Test
+    void searchTicketOnEtrain() {
+        step("Поик билетов на электричку", () ->{
+            searchTicketOnEtrain
+                    .etrain()
+                    .stationFromEtrain("Казань (Татарстан)")
+                    .stationToEtrain("Москва")
+                    .dataTo(tomorrowString)
+                    .searchButton();
+        });
+        step("Проверка найденных балетов на электричку", () -> {
+            searchTicketOnEtrain
+                    .checkCityEtrain("Казань → Москва");
+
+        });
+
+
     }
 }

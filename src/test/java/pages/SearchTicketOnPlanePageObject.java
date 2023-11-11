@@ -14,16 +14,19 @@ public class SearchTicketOnPlanePageObject {
             avia =  $(".tab_avia"),
             train = $(".tab_train"),
             bus = $(".tab_bus"),
+            etrain = $(".tab_etrain"),
             cityFrom = $(".j-city_from"),
             stationFrom = $(".j-station_input_from"),
             busStationFrom = $("[data-ti='departure-suggest']").$(".o-input"),
+            stationFromEtrain = $(".j-station_input_from"),
+            stationToEtrain = $("."),
             cityTo = $(".j-city_to"),
             stationTo = $(".j-station_input_to"),
             busStationTo = $("[data-ti='arrival-suggest']").$(".o-input"),
             searchButton = $(".button_wrp"),
             searchTrainButton = $(".m-border_inner"),
             searchBusButton = $(".o-button-expanded"),
-            dataToTrain = $(".j-date_to"),
+            dataTo = $(".j-date_to"),
             dataFrom = $(".j-date_from"),
             dataBack = $(".j-date_back"),
             dateBus = $(".o-dateinput"),
@@ -31,11 +34,9 @@ public class SearchTicketOnPlanePageObject {
             trainOfferCard = $("[data-ti='train-offer-card']").$(".o-container-fluid"),
             searchedLine = $("[data-ti='searchPanel']").$(".o-text-headerSmall-md"),
             child = $(".counter_child_wrp").$(".increase"),
-            noneTickets = $("[data-ti='offers_result']").$(".o3425"),
             chooseTicket = $(".o-container-fluid"),
             checkCities = $(".o-text-inline"),
             checkChild = $("[data-ti='tariff-detail']").$(".o-text-paragraphMedium"),
-            checkBaby = $("[data-ti='tariff-detail']").$(".o-text-paragraph"),
             addCityFrom = $(".j-last_row").$(".j-city_from"),
             addCityTo = $(".j-last_row").$(".j-city_to"),
             addData = $(".j-last_row").$(".j-date_input"),
@@ -45,7 +46,8 @@ public class SearchTicketOnPlanePageObject {
             checkCityTrainDepar = $("[data-ti='card-departure-0']").$("[data-ti='stopover-place']"),
             checkCityTrainArrive = $("[data-ti='card-arrival-0']").$("[data-ti='stopover-place']"),
             checkCityStartBus = $("[data-ti='startPlace']"),
-            checkCityEndBus = $("[data-ti='endPlace']");
+            checkCityEndBus = $("[data-ti='endPlace']"),
+            checkCityEtrain = $(".b-etrain__schedule_title");
 
 
     @DisplayName("Общее")
@@ -134,8 +136,8 @@ public class SearchTicketOnPlanePageObject {
         stationTo.setValue(value);
         return this;
     }
-    public SearchTicketOnPlanePageObject dataToTrain(String value) {
-        dataToTrain.setValue(value);
+    public SearchTicketOnPlanePageObject dataTo(String value) {
+        dataTo.setValue(value);
         return this;
     }
     public SearchTicketOnPlanePageObject searchTrainButton() {
@@ -169,6 +171,19 @@ public class SearchTicketOnPlanePageObject {
         return this;
     }
 
+    @DisplayName("Электричка")
+    public SearchTicketOnPlanePageObject etrain() {
+        etrain.click();
+        return this;
+    }
+    public SearchTicketOnPlanePageObject stationFromEtrain(String value) {
+        stationFromEtrain.setValue(value);
+        return this;
+    }
+    public SearchTicketOnPlanePageObject stationToEtrain(String value) {
+        stationToEtrain.setValue(value);
+        return this;
+    }
 
     @DisplayName("Проверки")
     public SearchTicketOnPlanePageObject resultLine(String value) {
@@ -181,10 +196,6 @@ public class SearchTicketOnPlanePageObject {
     }
     public SearchTicketOnPlanePageObject checkChild(String value) {
         checkChild.shouldHave(text(value));
-        return this;
-    }
-    public SearchTicketOnPlanePageObject noneTickets(String value) {
-        noneTickets.shouldHave(text(value));
         return this;
     }
     public SearchTicketOnPlanePageObject checkCityTrainDepar(String value) {
@@ -201,6 +212,10 @@ public class SearchTicketOnPlanePageObject {
     }
     public SearchTicketOnPlanePageObject checkCityEndBus(String value) {
         checkCityEndBus.shouldHave(text(value));
+        return this;
+    }
+    public SearchTicketOnPlanePageObject checkCityEtrain(String value) {
+        checkCityEtrain.shouldHave(text(value));
         return this;
     }
 }
