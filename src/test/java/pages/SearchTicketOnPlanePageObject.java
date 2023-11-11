@@ -2,6 +2,7 @@ package pages;
 
 
 import com.codeborne.selenide.SelenideElement;
+import org.junit.jupiter.api.DisplayName;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
@@ -25,13 +26,11 @@ public class SearchTicketOnPlanePageObject {
             listType = $(".list"),
             selectedType = $(".s-selected"),
             baby = $(".j-passenger_infant").$(".increase"),
-            existTickets = $("[data-ti='offers-header-description']"),
-            noneTickets = $(".o3425"),
+            noneTickets = $("[data-ti='offers_result']").$(".o3425"),
             chooseTicket = $(".o-container-fluid"),
             checkCities = $(".o-text-inline"),
             checkChild = $("[data-ti='tariff-detail']").$(".o-text-paragraphMedium"),
             checkBaby = $("[data-ti='tariff-detail']").$(".o-text-paragraph"),
-            tariff = $(".o-text-headerExtraSmall"),
             addCityFrom = $(".j-last_row").$(".j-city_from"),
             addCityTo = $(".j-last_row").$(".j-city_to"),
             addData = $(".j-last_row").$(".j-date_input"),
@@ -84,12 +83,6 @@ public class SearchTicketOnPlanePageObject {
     public SearchTicketOnPlanePageObject typeTicket(String value) {
         typeTicket.click();
         listType.$(byText(value)).click();
-//        selectedType.click();
-        return this;
-    }
-
-    public SearchTicketOnPlanePageObject checkTypeTicket(String value) {
-        checkTypeTicket.shouldHave(text(value));
         return this;
     }
 
@@ -98,18 +91,8 @@ public class SearchTicketOnPlanePageObject {
         return this;
     }
 
-    public SearchTicketOnPlanePageObject noneTickets(String value) {
-        noneTickets.shouldHave(text(value));
-        return this;
-    }
-
     public SearchTicketOnPlanePageObject chooseTicket() {
         chooseTicket.click();
-        return this;
-    }
-
-    public SearchTicketOnPlanePageObject tariff() {
-        tariff.scrollTo();
         return this;
     }
 
@@ -135,6 +118,11 @@ public class SearchTicketOnPlanePageObject {
         return this;
     }
 
+    public SearchTicketOnPlanePageObject searchedLine() {
+        searchedLine.getValue();
+        return this;
+    }
+
     public SearchTicketOnPlanePageObject exampleCityFrom() {
         exampleCityFrom.click();
         return this;
@@ -146,14 +134,9 @@ public class SearchTicketOnPlanePageObject {
     }
 
 
-    //checks
+    @DisplayName("Проверки")
     public SearchTicketOnPlanePageObject resultLine(String value) {
         resultLine.shouldHave(text(value));
-        return this;
-    }
-
-    public SearchTicketOnPlanePageObject existTickets(String value) {
-        existTickets.shouldHave(text(value));
         return this;
     }
 
@@ -172,8 +155,13 @@ public class SearchTicketOnPlanePageObject {
         return this;
     }
 
-    public SearchTicketOnPlanePageObject searchedLine() {
-        searchedLine.getValue();
+    public SearchTicketOnPlanePageObject checkTypeTicket(String value) {
+        checkTypeTicket.shouldHave(text(value));
+        return this;
+    }
+
+    public SearchTicketOnPlanePageObject noneTickets(String value) {
+        noneTickets.shouldHave(text(value));
         return this;
     }
 }
