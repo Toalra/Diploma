@@ -10,7 +10,6 @@ import java.time.format.DateTimeFormatter;
 import java.util.Locale;
 
 import static io.qameta.allure.Allure.step;
-import static utils.RandomTypeTicket.standart;
 
 @Tag("go_test")
 public class SearchTicketsOnPlaneTest extends TestBase {
@@ -19,8 +18,8 @@ public class SearchTicketsOnPlaneTest extends TestBase {
     SearchTicketOnPlanePageObject searchBabyTicket = new SearchTicketOnPlanePageObject();
     SearchTicketOnPlanePageObject searchTicketWithFlight = new SearchTicketOnPlanePageObject();
     SearchTicketOnPlanePageObject searchTicketsWithExampleCities = new SearchTicketOnPlanePageObject();
-    SearchTicketOnPlanePageObject searchRandomTypeTicket = new SearchTicketOnPlanePageObject();
     SearchTicketOnPlanePageObject searchNonTicket = new SearchTicketOnPlanePageObject();
+    SearchTicketOnPlanePageObject searchTicketOnTrain = new SearchTicketOnPlanePageObject();
 
     LocalDate today = LocalDate.now();
     LocalDate tomorrow = today.plusDays(1);
@@ -138,26 +137,6 @@ public class SearchTicketsOnPlaneTest extends TestBase {
     }
 
     @Test
-    void searchRandomTypeTicket() {
-        step("Поиск с рандомным типом билета", () -> {
-            searchRandomTypeTicket
-                    .openPage()
-                    .avia()
-                    .cityFrom("Казань")
-                    .cityTo("Москва")
-                    .dataFrom(tomorrowString)
-                    .dataBack(weekString)
-                    .typeTicket(standart)
-                    .searchButton()
-                    .chooseTicket();
-        });
-        step("Проверка поиска с рандомным типом билета", () -> {
-            searchRandomTypeTicket
-                    .checkTypeTicket(standart);
-        });
-    }
-
-    @Test
     void searchNonTicket() {
         step("Поиск билетов, которые отсутствуют", () -> {
             searchNonTicket
@@ -172,6 +151,26 @@ public class SearchTicketsOnPlaneTest extends TestBase {
         step("Проверка отсутствия билетов", () -> {
             searchNonTicket
                     .noneTickets("Нет билетов на эту дату");
+        });
+    }
+
+    @Test
+    void searchTicketOnTrain() {
+        step("Поиск билетов на поезд", () -> {
+            searchTicketOnTrain
+                    .openPage()
+                    .train()
+                    .stationFrom("Казань")
+                    .stationTo("Москва")
+                    .dataToTrain(tomorrowString)
+                    .searchButton()
+                    .trainOfferCard();
+        });
+        step("Проверка поиска билета на поезд", () -> {
+            searchTicketOnTrain
+                    .checkCityTrainDepar("Казань")
+                    .checkCityTrainArrive("Москва");
+
         });
     }
 }

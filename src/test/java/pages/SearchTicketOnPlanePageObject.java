@@ -5,7 +5,6 @@ import com.codeborne.selenide.SelenideElement;
 import org.junit.jupiter.api.DisplayName;
 
 import static com.codeborne.selenide.Condition.text;
-import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
@@ -13,18 +12,19 @@ public class SearchTicketOnPlanePageObject {
 
     SelenideElement
             avia =  $(".tab_avia"),
+            train = $(".tab_train"),
             cityFrom = $(".j-city_from"),
+            stationFrom = $(".j-station_input_from"),
             cityTo = $(".j-city_to"),
+            stationTo = $(".j-station_input_to"),
             searchButton = $(".button_wrp"),
+            dataToTrain = $(".j-date_to"),
             dataFrom = $(".j-date_from"),
             dataBack = $(".j-date_back"),
             resultLine = $(".o-text-inline"),
+            trainOfferCard = $("[data-ti='train-offer-card']").$(".o-container-fluid"),
             searchedLine = $("[data-ti='searchPanel']").$(".o-text-headerSmall-md"),
-
             child = $(".counter_child_wrp").$(".increase"),
-            typeTicket = $("._small"),
-            listType = $(".list"),
-            selectedType = $(".s-selected"),
             baby = $(".j-passenger_infant").$(".increase"),
             noneTickets = $("[data-ti='offers_result']").$(".o3425"),
             chooseTicket = $(".o-container-fluid"),
@@ -37,14 +37,24 @@ public class SearchTicketOnPlanePageObject {
             addFlight = $(".j-add_flight_button"),
             exampleCityFrom = $(".j-city_from_pseudo_container").$(".j-pseudo"),
             exampleCityTo = $(".j-city_to_pseudo_container").$(".j-pseudo"),
-            checkTypeTicket = $(".o-popper-popupContentBottomSlot").$(".o-text-paragraphSmall");
+            checkTypeTicket = $(".o-popper-popupContentBottomSlot").$(".o-text-paragraphSmall"),
+            checkCityTrainDepar = $("[data-ti='card-departure-0']").$(".o-text-inline"),
+            checkCityTrainArrive = $("[data-ti='card-arrival-0']").$(".o-text-inline");
 
+
+    @DisplayName("Общее")
     public SearchTicketOnPlanePageObject openPage() {
         open("https://www.tutu.ru/");
 
         return this;
     }
 
+    public SearchTicketOnPlanePageObject searchButton() {
+        searchButton.click();
+        return this;
+    }
+
+    @DisplayName("Самолет")
     public SearchTicketOnPlanePageObject avia() {
         avia.click();
         return this;
@@ -77,17 +87,6 @@ public class SearchTicketOnPlanePageObject {
 
     public SearchTicketOnPlanePageObject baby() {
         baby.click();
-        return this;
-    }
-
-    public SearchTicketOnPlanePageObject typeTicket(String value) {
-        typeTicket.click();
-        listType.$(byText(value)).click();
-        return this;
-    }
-
-    public SearchTicketOnPlanePageObject searchButton() {
-        searchButton.click();
         return this;
     }
 
@@ -134,6 +133,33 @@ public class SearchTicketOnPlanePageObject {
     }
 
 
+    @DisplayName("Поезд")
+    public SearchTicketOnPlanePageObject train() {
+        train.click();
+        return this;
+    }
+
+    public SearchTicketOnPlanePageObject stationFrom(String value) {
+        stationFrom.setValue(value);
+        return this;
+    }
+
+    public SearchTicketOnPlanePageObject stationTo(String value) {
+        stationTo.setValue(value);
+        return this;
+    }
+
+    public SearchTicketOnPlanePageObject dataToTrain(String value) {
+        dataToTrain.setValue(value);
+        return this;
+    }
+
+    public SearchTicketOnPlanePageObject trainOfferCard() {
+        trainOfferCard.click();
+        return this;
+    }
+
+
     @DisplayName("Проверки")
     public SearchTicketOnPlanePageObject resultLine(String value) {
         resultLine.shouldHave(text(value));
@@ -162,6 +188,16 @@ public class SearchTicketOnPlanePageObject {
 
     public SearchTicketOnPlanePageObject noneTickets(String value) {
         noneTickets.shouldHave(text(value));
+        return this;
+    }
+
+    public SearchTicketOnPlanePageObject checkCityTrainDepar(String value) {
+        checkCityTrainDepar.shouldHave(text(value));
+        return this;
+    }
+
+    public SearchTicketOnPlanePageObject checkCityTrainArrive(String value) {
+        checkCityTrainArrive.shouldHave(text(value));
         return this;
     }
 }
