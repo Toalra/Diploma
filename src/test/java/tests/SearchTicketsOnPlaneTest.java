@@ -125,8 +125,7 @@ public class SearchTicketsOnPlaneTest extends TestBase {
                     .cityFrom("Казань")
                     .cityTo("Анапа")
                     .dataFrom(tomorrowString)
-                    .dataBack(weekString)
-                    .searchButton();
+                    .dataBack(weekString);
         });
         step("Проверка отсутствия билетов", () -> {
             searchNonTicket
