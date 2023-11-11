@@ -39,8 +39,8 @@ public class SearchTicketOnPlanePageObject {
             exampleCityFrom = $(".j-city_from_pseudo_container").$(".j-pseudo"),
             exampleCityTo = $(".j-city_to_pseudo_container").$(".j-pseudo"),
             checkTypeTicket = $(".o-popper-popupContentBottomSlot").$(".o-text-paragraphSmall"),
-            checkCityTrainDepar = $("[data-ti='card-departure-0']").$(".o-text-inline"),
-            checkCityTrainArrive = $("[data-ti='card-arrival-0']").$(".o-text-inline");
+            checkCityTrainDepar = $("[data-ti='card-departure-0']").$("[data-ti='stopover-place']"),
+            checkCityTrainArrive = $("[data-ti='card-arrival-0']").$("[data-ti='stopover-place']");
 
 
     @DisplayName("Общее")
