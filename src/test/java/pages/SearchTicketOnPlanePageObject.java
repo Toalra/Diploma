@@ -72,7 +72,8 @@ public class SearchTicketOnPlanePageObject {
         return this;
     }
     public SearchTicketOnPlanePageObject dataBack(String value) {
-        dataBack.setValue(value).pressEnter();
+        dataBack.setValue(value);
+        dataBack.pressEnter();
         return this;
     }
     public SearchTicketOnPlanePageObject searchButton() {
