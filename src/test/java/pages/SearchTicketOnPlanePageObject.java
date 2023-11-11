@@ -18,6 +18,7 @@ public class SearchTicketOnPlanePageObject {
             cityTo = $(".j-city_to"),
             stationTo = $(".j-station_input_to"),
             searchButton = $(".button_wrp"),
+            searchTrainButton = $(".j-button-submit"),
             dataToTrain = $(".j-date_to"),
             dataFrom = $(".j-date_from"),
             dataBack = $(".j-date_back"),
@@ -151,6 +152,11 @@ public class SearchTicketOnPlanePageObject {
 
     public SearchTicketOnPlanePageObject dataToTrain(String value) {
         dataToTrain.setValue(value);
+        return this;
+    }
+
+    public SearchTicketOnPlanePageObject searchTrainButton() {
+        searchTrainButton.click();
         return this;
     }
 

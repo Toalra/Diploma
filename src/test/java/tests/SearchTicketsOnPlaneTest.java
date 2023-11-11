@@ -163,7 +163,7 @@ public class SearchTicketsOnPlaneTest extends TestBase {
                     .stationFrom("Казань")
                     .stationTo("Москва")
                     .dataToTrain(tomorrowString)
-                    .searchButton()
+                    .searchTrainButton()
                     .trainOfferCard();
         });
         step("Проверка поиска билета на поезд", () -> {
