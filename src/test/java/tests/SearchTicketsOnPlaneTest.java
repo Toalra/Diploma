@@ -20,6 +20,7 @@ public class SearchTicketsOnPlaneTest extends TestBase {
     SearchTicketOnPlanePageObject searchTicketsWithExampleCities = new SearchTicketOnPlanePageObject();
     SearchTicketOnPlanePageObject searchNonTicket = new SearchTicketOnPlanePageObject();
     SearchTicketOnPlanePageObject searchTicketOnTrain = new SearchTicketOnPlanePageObject();
+    SearchTicketOnPlanePageObject searchTicketsOnBus = new SearchTicketOnPlanePageObject();
 
     LocalDate today = LocalDate.now();
     LocalDate tomorrow = today.plusDays(1);
@@ -75,27 +76,6 @@ public class SearchTicketsOnPlaneTest extends TestBase {
         });
     }
 
-    @Test
-    void searchBabyTicket(){
-        step("Поиск билетов на самолет с 1 малышом", () -> {
-            searchBabyTicket
-                    .openPage()
-                    .avia()
-                    .cityFrom("Казань")
-                    .cityTo("Москва")
-                    .dataFrom(tomorrowString)
-                    .dataBack(weekString)
-                    .baby()
-                    .searchButton()
-                    .chooseTicket();
-        });
-
-        step("Проверка найденного билета по указанным параметрам в поиске с 1 малышом", () -> {
-            searchBabyTicket
-                    .checkCities("Казань" + " — " + "Москва")
-                    .checkBaby("Ручная кладь 10 кг для взрослого, нет для малыша");
-        });
-    }
     @Test
     void searchTicketWithFlight() {
         step("Поиск билетов с перелетом", () -> {
@@ -171,6 +151,23 @@ public class SearchTicketsOnPlaneTest extends TestBase {
                     .checkCityTrainDepar("Казань")
                     .checkCityTrainArrive("Москва");
 
+        });
+    }
+    @Test
+    void searchTicketsOnBus() {
+        step("Поиск билетов на автобус", () -> {
+            searchTicketsOnBus
+                    .openPage()
+                    .bus()
+                    .busStationFrom("Казань")
+                    .busStationTo("Москва")
+                    .dateBus(tomorrowString)
+                    .searchBusButton();
+        });
+        step("Проверка найденных билетов на автобус", () -> {
+            searchTicketsOnBus
+                    .checkCityStartBus("Казань")
+                    .checkCityEndBus("Центральный");
         });
     }
 }
