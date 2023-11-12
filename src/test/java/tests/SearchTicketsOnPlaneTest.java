@@ -18,7 +18,7 @@ public class SearchTicketsOnPlaneTest extends TestBase {
     SearchTicketOnPlanePageObject searchTicketsWithExampleCities = new SearchTicketOnPlanePageObject();
     SearchTicketOnPlanePageObject searchTicketOnTrain = new SearchTicketOnPlanePageObject();
     SearchTicketOnPlanePageObject searchTicketsOnBus = new SearchTicketOnPlanePageObject();
-    SearchTicketOnPlanePageObject searchTicketOnEtrain = new SearchTicketOnPlanePageObject();
+    SearchTicketOnPlanePageObject searchTicketBusExp = new SearchTicketOnPlanePageObject();
 
     LocalDate today = LocalDate.now();
     LocalDate tomorrow = today.plusDays(1);
@@ -145,18 +145,18 @@ public class SearchTicketsOnPlaneTest extends TestBase {
         });
     }
     @Test
-    void searchTicketOnEtrain() {
+    void searchTicketBusExp() {
         step("Поик примерных билетов на автобус", () ->{
-            searchTicketOnEtrain
+            searchTicketBusExp
                     .openPage()
                     .bus()
                     .stationFromBusExp()
                     .stationToBusExp()
-                    .dataTo(tomorrowString)
+                    .dateBus(tomorrowString)
                     .searchButton();
         });
         step("Проверка найденных примерных балетов на автобус", () -> {
-            searchTicketOnEtrain
+            searchTicketBusExp
                     .checkCityExpBus();
 
         });
