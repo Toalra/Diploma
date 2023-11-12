@@ -117,5 +117,5 @@ java "-DconfigFile=notifications/config.json" -jar notifications/allure-notifica
 <h2><img src="https://github.com/Toalra/Diploma/blob/master/src/test/resources/media/logs/Selenoid.svg" wight="30" height="30"/>Видео  примером запуска</h2>
 
 С помощью видео в `Allure Jenkins` можно увидеть прохождение автотеста 
-<img  src="https://github.com/Toalra/Diploma/blob/master/resources/media/video/searchTicketOnTrain.gif" wight="500" height="500"/>
-<img  src="https://github.com/Toalra/Diploma/blob/master/resources/media/video/searchTicketWithFlight.gif" wight="500" height="500"/>
+<img  src="https://github.com/Toalra/Diploma/blob/master/src/test/resources/media/video/searchTicketOnTrain.gif" wight="500" height="500"/>
+<img  src="https://github.com/Toalra/Diploma/blob/master/src/test/resources/media/video/searchTicketWithFlight.gif" wight="500" height="500"/>
