@@ -35,25 +35,27 @@ public class SearchTicketOnPlanePageObject {
 
             child = $(".counter_child_wrp").$(".increase"),
 
+            chooseTicket = $(".o-container-fluid"),
+
             resultLine = $(".o-text-inline"),
             trainOfferCard = $("[data-ti='train-offer-card']").$(".o-container-fluid"),
             searchedLine = $("[data-ti='searchPanel']").$(".o-text-headerSmall-md"),
 
-
-            chooseTicket = $(".o-container-fluid"),
-            checkCities = $(".o-text-inline"),
-            checkChild = $("[data-ti='tariff-detail']").$(".o-text-paragraphMedium"),
             addCityFrom = $(".j-last_row").$(".j-city_from"),
             addCityTo = $(".j-last_row").$(".j-city_to"),
             addData = $(".j-last_row").$(".j-date_input"),
             addFlight = $(".j-add_flight_button"),
+
             exampleCityFrom = $(".j-city_from_pseudo_container").$(".j-pseudo"),
             exampleCityTo = $(".j-city_to_pseudo_container").$(".j-pseudo"),
+
+            checkCities = $(".o-text-inline"),
+            checkChild = $("[data-ti='tariff-detail']").$(".o-text-paragraphMedium"),
             checkCityTrainDepar = $("[data-ti='card-departure-0']").$("[data-ti='stopover-place']"),
             checkCityTrainArrive = $("[data-ti='card-arrival-0']").$("[data-ti='stopover-place']"),
             checkCityStartBus = $("[data-ti='startPlace']"),
             checkCityEndBus = $("[data-ti='endPlace']"),
-            checkCityExpBus = $(".b-etrain__schedule_title");
+            checkCityExpBus = $("[data-ti='main_title']");
 
 
     @DisplayName("Общее")
