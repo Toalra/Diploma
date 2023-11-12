@@ -192,7 +192,6 @@ public class SearchTicketOnPlanePageObject {
         return this;
     }
 
-
     @DisplayName("Проверки")
     public SearchTicketOnPlanePageObject resultLine(String value) {
         resultLine.shouldHave(text(value));
@@ -200,10 +199,6 @@ public class SearchTicketOnPlanePageObject {
     }
     public SearchTicketOnPlanePageObject checkCities(String value) {
         checkCities.shouldHave(text(value));
-        return this;
-    }
-    public SearchTicketOnPlanePageObject checkChild(String value) {
-        checkChild.shouldHave(text(value));
         return this;
     }
     public SearchTicketOnPlanePageObject checkCityTrainDepar(String value) {
