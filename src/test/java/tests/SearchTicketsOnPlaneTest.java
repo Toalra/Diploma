@@ -1,13 +1,11 @@
 package tests;
 
-import com.github.javafaker.Faker;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import pages.SearchTicketOnPlanePageObject;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
-import java.util.Locale;
 
 import static io.qameta.allure.Allure.step;
 
@@ -29,11 +27,6 @@ public class SearchTicketsOnPlaneTest extends TestBase {
     String tomorrowString = tomorrow.format(formatter);
     String weekString = week.format(formatter);
 
-    Faker faker = new Faker(new Locale("ru-RU"));
-    String city1 = faker.address().cityName();
-
-    String city2 = faker.address().cityName();
-
     @Test
     void searchTickets() {
         step("Поиск билетов на самолет за промежуток времени", () -> {
@@ -44,7 +37,6 @@ public class SearchTicketsOnPlaneTest extends TestBase {
             .cityTo("Москва")
             .dataFrom(tomorrowString)
             .dataBack(weekString)
-            .searchButton()
             .chooseTicket();
         });
 
