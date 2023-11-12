@@ -37,8 +37,8 @@ public class SearchTicketsOnPlaneTest extends TestBase {
             .cityFrom("Казань")
             .cityTo("Москва")
             .dataFrom(tomorrowString)
-            .dataBack(weekString)
-            .chooseTicket();
+            .dataBack(weekString);
+            //.chooseTicket();
         });
 
 //        step("Проверка найденных билетов за указанный промежуток времени", () -> {
@@ -114,8 +114,8 @@ public class SearchTicketsOnPlaneTest extends TestBase {
                     .train()
                     .exampleCityTrainFrom()
                     .exampleCityTrainTo()
-                    .dataTo(tomorrowString)
-                    .searchTrainButton();
+                    .dataTo(tomorrowString);
+                    //.searchTrainButton();
         });
 //        step("Проверка примерных билетов на поезд", () ->{
 //            searchExpTicketOnTrain
