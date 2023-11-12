@@ -17,6 +17,7 @@ public class SearchTicketsOnPlaneTest extends TestBase {
     SearchTicketOnPlanePageObject searchTicketWithFlight = new SearchTicketOnPlanePageObject();
     SearchTicketOnPlanePageObject searchTicketsWithExampleCities = new SearchTicketOnPlanePageObject();
     SearchTicketOnPlanePageObject searchTicketOnTrain = new SearchTicketOnPlanePageObject();
+    SearchTicketOnPlanePageObject searchExpTicketOnTrain = new SearchTicketOnPlanePageObject();
     SearchTicketOnPlanePageObject searchTicketsOnBus = new SearchTicketOnPlanePageObject();
     SearchTicketOnPlanePageObject searchTicketBusExp = new SearchTicketOnPlanePageObject();
 
@@ -43,28 +44,6 @@ public class SearchTicketsOnPlaneTest extends TestBase {
         step("Проверка найденных билетов за указанный промежуток времени", () -> {
         searchChildTickets
             .resultLine("Казань" + " — " + "Москва");
-        });
-    }
-
-    @Test
-        void searchChildTickets(){
-        step("Поиск билетов на самолет с 1 ребенком", () -> {
-            searchChildTickets
-                    .openPage()
-                    .avia()
-                    .cityFrom("Казань")
-                    .cityTo("Москва")
-                    .dataFrom(tomorrowString)
-                    .dataBack(weekString)
-                    .child()
-                    .searchButton()
-                    .chooseTicket();
-        });
-
-        step("Проверка выбранного билета по указанным параметрам в поиске с 1 ребенком", () -> {
-            searchChildTickets
-                    .checkCities("Казань" + " — " + "Москва")
-                    .checkChild("за двоих");
         });
     }
 
@@ -125,6 +104,22 @@ public class SearchTicketsOnPlaneTest extends TestBase {
                     .checkCityTrainDepar("Казань")
                     .checkCityTrainArrive("Москва");
 
+        });
+    }
+    @Test
+    void searchExpTicketOnTrain() {
+        step("Поиск примерных билетов на поезд", () -> {
+            searchExpTicketOnTrain
+                    .openPage()
+                    .train()
+                    .exampleCityTrainFrom()
+                    .exampleCityTrainTo()
+                    .dataTo(tomorrowString)
+                    .searchTrainButton();
+        });
+        step("Проверка примерных билетов на поезд", () ->{
+            searchExpTicketOnTrain
+                .checkExpCityTrain();
         });
     }
     @Test

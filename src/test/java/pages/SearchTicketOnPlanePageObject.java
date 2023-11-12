@@ -21,8 +21,6 @@ public class SearchTicketOnPlanePageObject {
             cityTo = $(".j-city_to"),
             stationTo = $(".j-station_input_to"),
             busStationTo = $("[data-ti='arrival-suggest']").$(".o-input"),
-            stationFromBusExp = $("[data-ti='departure-suggest']").$(".o-text-inline"),
-            stationToBusExp = $("[data-ti='arrival-suggest']").$(".o-text-inline"),
 
             searchButton = $(".button_wrp"),
             searchTrainButton = $(".m-border_inner"),
@@ -48,11 +46,16 @@ public class SearchTicketOnPlanePageObject {
 
             exampleCityFrom = $(".j-city_from_pseudo_container").$(".j-pseudo"),
             exampleCityTo = $(".j-city_to_pseudo_container").$(".j-pseudo"),
+            stationFromBusExp = $("[data-ti='departure-suggest']").$(".o-text-inline"),
+            stationToBusExp = $("[data-ti='arrival-suggest']").$(".o-text-inline"),
+            exampleCityTrainFrom = $(".departure").$(".j-pseudo"),
+            exampleCityTrainTo = $(".arrival").$(".j-pseudo"),
 
             checkCities = $(".o-text-inline"),
             checkChild = $("[data-ti='tariff-detail']").$(".o-text-paragraphMedium"),
             checkCityTrainDepar = $("[data-ti='card-departure-0']").$("[data-ti='stopover-place']"),
             checkCityTrainArrive = $("[data-ti='card-arrival-0']").$("[data-ti='stopover-place']"),
+            checkExpCityTrain = $("[data-ti='card-departure-0']").$(".o-text-inline"),
             checkCityStartBus = $("[data-ti='startPlace']"),
             checkCityEndBus = $("[data-ti='endPlace']"),
             checkCityExpBus = $("[data-ti='main_title']");
@@ -156,6 +159,14 @@ public class SearchTicketOnPlanePageObject {
         trainOfferCard.click();
         return this;
     }
+    public SearchTicketOnPlanePageObject exampleCityTrainFrom() {
+        exampleCityTrainFrom.click();
+        return this;
+    }
+    public SearchTicketOnPlanePageObject exampleCityTrainTo() {
+        exampleCityTrainTo.click();
+        return this;
+    }
 
     @DisplayName("Автобус")
     public SearchTicketOnPlanePageObject bus() {
@@ -219,6 +230,10 @@ public class SearchTicketOnPlanePageObject {
     }
     public SearchTicketOnPlanePageObject checkCityExpBus() {
         checkCityExpBus.getValue();
+        return this;
+    }
+    public SearchTicketOnPlanePageObject checkExpCityTrain() {
+        checkExpCityTrain.getValue();
         return this;
     }
 }
