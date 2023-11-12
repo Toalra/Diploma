@@ -18,8 +18,8 @@ public class SearchTicketOnPlanePageObject {
             cityFrom = $(".j-city_from"),
             stationFrom = $(".j-station_input_from"),
             busStationFrom = $("[data-ti='departure-suggest']").$(".o-input"),
-            stationFromEtrain = $(".j-station_input_from"),
-            stationToEtrain = $("j-station_input_to"),
+            stationFromBusExp = $("[data-ti='departure-suggest']").$(".o-text-inline"),
+            stationToBusExp = $("[data-ti='arrival-suggest']").$(".o-text-inline"),
             cityTo = $(".j-city_to"),
             stationTo = $(".j-station_input_to"),
             busStationTo = $("[data-ti='arrival-suggest']").$(".o-input"),
@@ -47,7 +47,7 @@ public class SearchTicketOnPlanePageObject {
             checkCityTrainArrive = $("[data-ti='card-arrival-0']").$("[data-ti='stopover-place']"),
             checkCityStartBus = $("[data-ti='startPlace']"),
             checkCityEndBus = $("[data-ti='endPlace']"),
-            checkCityEtrain = $(".b-etrain__schedule_title");
+            checkCityExpBus = $(".b-etrain__schedule_title");
 
 
     @DisplayName("Общее")
@@ -170,22 +170,15 @@ public class SearchTicketOnPlanePageObject {
         searchBusButton.click();
         return this;
     }
+    public SearchTicketOnPlanePageObject stationFromBusExp() {
+        stationFromBusExp.click();
+        return this;
+    }
+    public SearchTicketOnPlanePageObject stationToBusExp() {
+        stationToBusExp.click();
+        return this;
+    }
 
-    @DisplayName("Электричка")
-    public SearchTicketOnPlanePageObject etrain() {
-        etrain.click();
-        return this;
-    }
-    public SearchTicketOnPlanePageObject stationFromEtrain(String value) {
-        stationFromEtrain.click();
-        stationFromEtrain.setValue(value);
-        return this;
-    }
-    public SearchTicketOnPlanePageObject stationToEtrain(String value) {
-        stationToEtrain.click();
-        stationToEtrain.setValue(value);
-        return this;
-    }
 
     @DisplayName("Проверки")
     public SearchTicketOnPlanePageObject resultLine(String value) {
@@ -216,8 +209,8 @@ public class SearchTicketOnPlanePageObject {
         checkCityEndBus.shouldHave(text(value));
         return this;
     }
-    public SearchTicketOnPlanePageObject checkCityEtrain(String value) {
-        checkCityEtrain.shouldHave(text(value));
+    public SearchTicketOnPlanePageObject checkCityExpBus() {
+        checkCityExpBus.getValue();
         return this;
     }
 }

@@ -146,18 +146,18 @@ public class SearchTicketsOnPlaneTest extends TestBase {
     }
     @Test
     void searchTicketOnEtrain() {
-        step("Поик билетов на электричку", () ->{
+        step("Поик примерных билетов на автобус", () ->{
             searchTicketOnEtrain
                     .openPage()
-                    .etrain()
-                    .stationFromEtrain("Казань (Татарстан)")
-                    .stationToEtrain("Москва")
+                    .bus()
+                    .stationFromBusExp()
+                    .stationToBusExp()
                     .dataTo(tomorrowString)
                     .searchButton();
         });
-        step("Проверка найденных балетов на электричку", () -> {
+        step("Проверка найденных примерных балетов на автобус", () -> {
             searchTicketOnEtrain
-                    .checkCityEtrain("Казань → Москва");
+                    .checkCityExpBus();
 
         });
 
