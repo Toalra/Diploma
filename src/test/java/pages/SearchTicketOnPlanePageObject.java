@@ -177,10 +177,12 @@ public class SearchTicketOnPlanePageObject {
         return this;
     }
     public SearchTicketOnPlanePageObject stationFromEtrain(String value) {
+        stationFromEtrain.click();
         stationFromEtrain.setValue(value);
         return this;
     }
     public SearchTicketOnPlanePageObject stationToEtrain(String value) {
+        stationToEtrain.click();
         stationToEtrain.setValue(value);
         return this;
     }
