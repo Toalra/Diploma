@@ -18,7 +18,7 @@ public class SearchTicketOnPlanePageObject {
             cityFrom = $(".j-city_from"),
             stationFrom = $(".j-station_input_from"),
             busStationFrom = $("[data-ti='departure-suggest']").$(".o-input"),
-            stationFromEtrain = $(".m-train_form").$(".j-station_input_from"),
+            stationFromEtrain = $(".j-station_input_from"),
             stationToEtrain = $("j-station_input_to"),
             cityTo = $(".j-city_to"),
             stationTo = $(".j-station_input_to"),
