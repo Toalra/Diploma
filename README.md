@@ -87,35 +87,35 @@ java "-DconfigFile=notifications/config.json" -jar notifications/allure-notifica
 * `BASE_URL` – web-адрес тестируемого приложения.
 * `REMOTE_BROWSER_URL`  – адрес удаленного сервера для запуска автотестов.
 
-<h2><img src="https://github.com/Toalra/Diploma/blob/master/media/logs/Jenkins.svg" wight="30" height="30"/><a>Сборка в </a>
+<h2><img src="https://github.com/Toalra/Diploma/blob/master/resources/media/logs/Jenkins.svg" wight="30" height="30"/><a>Сборка в </a>
   <a href="https://jenkins.autotests.cloud/job/dats.team_autotesting_tokareva_aliya"> Jenkins</a></h2>
-<a title="jenkinsReport"><img  src="https://github.com/Toalra/Diploma/blob/master/media/results/jenkinsCommonResults.png" wight="500" height="500"/></a>
+<a title="jenkinsReport"><img  src="https://github.com/Toalra/Diploma/blob/master/resources/media/results/jenkinsCommonResults.png" wight="500" height="500"/></a>
 <h3><a>Overwies в </a>
 <a href="https://jenkins.autotests.cloud/job/dats.team_autotesting_tokareva_aliya/43/allure/">Allure Report</a></h3>
-<a href=""><img  src="https://github.com/Toalra/Diploma/blob/master/media/results/jenkinsAllure_diploma.png" wight="500" height="450"/></a>
+<a href=""><img  src="https://github.com/Toalra/Diploma/blob/master/resources/media/results/jenkinsAllure_diploma.png" wight="500" height="450"/></a>
 
 <h3>Результат выполнения теста</h3>
-<a title="allureResults"><img  src="https://github.com/Toalra/Diploma/blob/master/media/results/jenkinsAllure_diploma_pased.png" wight=700" height="500"/></a>
+<a title="allureResults"><img  src="https://github.com/Toalra/Diploma/blob/master/resources/media/results/jenkinsAllure_diploma_pased.png" wight=700" height="500"/></a>
 
-<h2><img  src="https://github.com/Toalra/Diploma/blob/master/media/logs/AllureTestOps.svg" wight="30" height="30"/><a>Интеграция с </a>
+<h2><img  src="https://github.com/Toalra/Diploma/blob/master/resources/media/logs/AllureTestOps.svg" wight="30" height="30"/><a>Интеграция с </a>
   <a href="https://allure.autotests.cloud/launch/30429/tree/485930?treeId=0">Allure TestOps </a></h2>
 
 Сборка имеет интеграцию `Jenkins` с `Allure TestOps`. Результат выполнения автотестов отображается в `Allure TestOps` на `Dashboard` в `Allure TestOps` отображена статистика пройденных тестов.
-<img  src="https://github.com/Toalra/Diploma/blob/master/media/results/testOpsStatistics.png" wight="700" height="500"/>
+<img  src="https://github.com/Toalra/Diploma/blob/master/resources/media/results/testOpsStatistics.png" wight="700" height="500"/>
 
-<h2><img src="https://github.com/Toalra/Diploma/blob/master/media/logs/Jira.svg" wight="30" height="30"/><a>Интеграция</a>
+<h2><img src="https://github.com/Toalra/Diploma/blob/master/resources/media/logs/Jira.svg" wight="30" height="30"/><a>Интеграция</a>
   <a href="https://jira.autotests.cloud/browse/HOMEWORK-947">с Jira</a></h2>
 
 Выполнена интеграция `Allure TestOps` с `Jira`, в тикете отображается список автотестов и результаты их прогода.
-<img  src="https://github.com/Toalra/Diploma/blob/master/media/results/jira_diploma.png" wight="800" height="600"/>
+<img  src="https://github.com/Toalra/Diploma/blob/master/resources/media/results/jira_diploma.png" wight="800" height="600"/>
 
-<h2><img src="https://github.com/Toalra/Diploma/blob/master/media/logs/Telegram.svg" wight="30" height="30"/>  Краткий отчет в Telegram</h2>
+<h2><img src="https://github.com/Toalra/Diploma/blob/master/resources/media/logs/Telegram.svg" wight="30" height="30"/>  Краткий отчет в Telegram</h2>
 
 После прогона их `Jenkins` в `Telegram` отправляется уведомление с кратким отчетом результатов пройденного тестирования.
-<a><img  src="https://github.com/Toalra/Diploma/blob/master/media/results/telegramResults.png" wight="500" height="500"/></a>
+<a><img  src="https://github.com/Toalra/Diploma/blob/master/resources/media/results/telegramResults.png" wight="500" height="500"/></a>
 
-<h2><img src="https://github.com/Toalra/DatsTeam_autotesting_tokareva_aliya/blob/master/media/logs/Selenoid.svg" wight="30" height="30"/>Видео  примером запуска</h2>
+<h2><img src="https://github.com/Toalra/DatsTeam_autotesting_tokareva_aliya/blob/master/resources/media/logs/Selenoid.svg" wight="30" height="30"/>Видео  примером запуска</h2>
 
 С помощью видео в `Allure Jenkins` можно увидеть прохождение автотеста 
-<img  src="https://github.com/Toalra/Diploma/blob/master/media/video/searchChildTickets.gif" wight="500" height="500"/>
-<img  src="https://github.com/Toalra/Diploma/blob/master/media/video/searchTicketWithFlight.gif" wight="500" height="500"/>
+<img  src="https://github.com/Toalra/Diploma/blob/master/resources/media/video/searchTicketOnTrain.gif" wight="500" height="500"/>
+<img  src="https://github.com/Toalra/Diploma/blob/master/resources/media/video/searchTicketWithFlight.gif" wight="500" height="500"/>
