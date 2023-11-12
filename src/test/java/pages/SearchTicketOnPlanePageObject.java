@@ -31,8 +31,6 @@ public class SearchTicketOnPlanePageObject {
             dataBack = $(".j-date_back"),
             dateBus = $(".o-dateinput"),
 
-            child = $(".counter_child_wrp").$(".increase"),
-
             chooseTicket = $(".o-container-fluid"),
 
             resultLine = $(".o-text-inline"),
@@ -91,10 +89,6 @@ public class SearchTicketOnPlanePageObject {
     }
     public SearchTicketOnPlanePageObject searchButton() {
         searchButton.click();
-        return this;
-    }
-    public SearchTicketOnPlanePageObject child() {
-        child.click();
         return this;
     }
     public SearchTicketOnPlanePageObject chooseTicket() {
