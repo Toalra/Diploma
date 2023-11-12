@@ -95,7 +95,7 @@ java "-DconfigFile=notifications/config.json" -jar notifications/allure-notifica
 <a href=""><img  src="https://github.com/Toalra/Diploma/blob/master/media/results/jenkinsAllure_diploma.png" wight="500" height="450"/></a>
 
 <h3>Результат выполнения теста</h3>
-<a title="allureResults"><img  src="https://github.com/Toalra/Diploma/blob/master/media/results/jenkinsAllure_diploma_fail.png" wight=700" height="500"/></a>
+<a title="allureResults"><img  src="https://github.com/Toalra/Diploma/blob/master/media/results/testOps_diploma_fail.png" wight=700" height="500"/></a>
 
 В случае, если тест упал, то в `Jenkins Allure` сразу отобразится код ошибки, видео падения теста в интерфейсе, последний скриншот, Page source и другие attachmends
 
