@@ -153,7 +153,7 @@ public class SearchTicketsOnPlaneTest extends TestBase {
                     .stationFromBusExp()
                     .stationToBusExp()
                     .dateBus(tomorrowString)
-                    .searchButton();
+                    .searchBusButton();
         });
         step("Проверка найденных примерных балетов на автобус", () -> {
             searchTicketBusExp

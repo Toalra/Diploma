@@ -14,26 +14,32 @@ public class SearchTicketOnPlanePageObject {
             avia =  $(".tab_avia"),
             train = $(".tab_train"),
             bus = $(".tab_bus"),
-            etrain = $(".tab_etrain"),
+
             cityFrom = $(".j-city_from"),
             stationFrom = $(".j-station_input_from"),
             busStationFrom = $("[data-ti='departure-suggest']").$(".o-input"),
-            stationFromBusExp = $("[data-ti='departure-suggest']").$(".o-text-inline"),
-            stationToBusExp = $("[data-ti='arrival-suggest']").$(".o-text-inline"),
             cityTo = $(".j-city_to"),
             stationTo = $(".j-station_input_to"),
             busStationTo = $("[data-ti='arrival-suggest']").$(".o-input"),
+            stationFromBusExp = $("[data-ti='departure-suggest']").$(".o-text-inline"),
+            stationToBusExp = $("[data-ti='arrival-suggest']").$(".o-text-inline"),
+
             searchButton = $(".button_wrp"),
             searchTrainButton = $(".m-border_inner"),
             searchBusButton = $(".o-button-expanded"),
+
             dataTo = $(".j-date_to"),
             dataFrom = $(".j-date_from"),
             dataBack = $(".j-date_back"),
             dateBus = $(".o-dateinput"),
+
+            child = $(".counter_child_wrp").$(".increase"),
+
             resultLine = $(".o-text-inline"),
             trainOfferCard = $("[data-ti='train-offer-card']").$(".o-container-fluid"),
             searchedLine = $("[data-ti='searchPanel']").$(".o-text-headerSmall-md"),
-            child = $(".counter_child_wrp").$(".increase"),
+
+
             chooseTicket = $(".o-container-fluid"),
             checkCities = $(".o-text-inline"),
             checkChild = $("[data-ti='tariff-detail']").$(".o-text-paragraphMedium"),
