@@ -118,7 +118,7 @@ public class SearchTicketsTest extends TestBase {
                     .dataTo(tomorrowString)
                     .searchTrainButton();
         });
-        step("Проверка примерных билетов на поезд", () ->{
+        step("Проверка билетов на поезд из примера", () ->{
             searchExpTicketOnTrain
                 .checkExpCityTrain();
         });
@@ -151,7 +151,7 @@ public class SearchTicketsTest extends TestBase {
                     .dateBus(tomorrowString)
                     .searchBusButton();
         });
-        step("Проверка найденных примерных балетов на автобус", () -> {
+        step("Проверка найденных билетов на автобус из примера", () -> {
             searchTicketBusExp
                     .checkCityExpBus();
 
