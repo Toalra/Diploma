@@ -2,7 +2,9 @@ package tests;
 
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
+import pages.SearchTicketOnBusPageObject;
 import pages.SearchTicketOnPlanePageObject;
+import pages.SearchTicketOnTrainPageObject;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
@@ -10,16 +12,15 @@ import java.time.format.DateTimeFormatter;
 import static io.qameta.allure.Allure.step;
 
 @Tag("go_test")
-public class SearchTicketsOnPlaneTest extends TestBase {
+public class SearchTicketsTest extends TestBase {
     SearchTicketOnPlanePageObject searchTickets = new SearchTicketOnPlanePageObject();
     SearchTicketOnPlanePageObject searchChildTickets = new SearchTicketOnPlanePageObject();
-    SearchTicketOnPlanePageObject searchBabyTicket = new SearchTicketOnPlanePageObject();
     SearchTicketOnPlanePageObject searchTicketWithFlight = new SearchTicketOnPlanePageObject();
     SearchTicketOnPlanePageObject searchTicketsWithExampleCities = new SearchTicketOnPlanePageObject();
-    SearchTicketOnPlanePageObject searchTicketOnTrain = new SearchTicketOnPlanePageObject();
-    SearchTicketOnPlanePageObject searchExpTicketOnTrain = new SearchTicketOnPlanePageObject();
-    SearchTicketOnPlanePageObject searchTicketsOnBus = new SearchTicketOnPlanePageObject();
-    SearchTicketOnPlanePageObject searchTicketBusExp = new SearchTicketOnPlanePageObject();
+    SearchTicketOnTrainPageObject searchTicketOnTrain = new SearchTicketOnTrainPageObject();
+    SearchTicketOnTrainPageObject searchExpTicketOnTrain = new SearchTicketOnTrainPageObject();
+    SearchTicketOnBusPageObject searchTicketsOnBus = new SearchTicketOnBusPageObject();
+    SearchTicketOnBusPageObject searchTicketBusExp = new SearchTicketOnBusPageObject();
 
     LocalDate today = LocalDate.now();
     LocalDate tomorrow = today.plusDays(1);
@@ -41,7 +42,7 @@ public class SearchTicketsOnPlaneTest extends TestBase {
             .chooseTicket();
         });
 
-        step("Проверка найденных билетов за указанный промежуток времени", () -> {
+        step("Проверка найденных билетов на самолет за указанный промежуток времени", () -> {
         searchChildTickets
             .resultLine("Казань" + " — " + "Москва");
         });
@@ -49,7 +50,7 @@ public class SearchTicketsOnPlaneTest extends TestBase {
 
     @Test
     void searchTicketWithFlight() {
-        step("Поиск билетов с перелетом", () -> {
+        step("Поиск билетов на самолет с перелетом", () -> {
             searchTicketWithFlight
                     .openPage()
                     .avia()
@@ -63,7 +64,7 @@ public class SearchTicketsOnPlaneTest extends TestBase {
                     .searchButton()
                     .chooseTicket();
         });
-        step("Проверка билетов с перелетом", () -> {
+        step("Проверка билетов на самолет с перелетом", () -> {
             searchTicketWithFlight
                      .checkCities("Казань" + " — " + "Москва");
         });
@@ -71,7 +72,7 @@ public class SearchTicketsOnPlaneTest extends TestBase {
 
     @Test
     void searchTicketsWithExampleCities() {
-        step("Поиск билетов с городами из примера", () -> {
+        step("Поиск билетов на самолет с городами из примера", () -> {
             searchTicketsWithExampleCities
                     .openPage()
                     .avia()
@@ -81,7 +82,7 @@ public class SearchTicketsOnPlaneTest extends TestBase {
                     .searchButton()
                     .chooseTicket();;
         });
-        step("Проверка билетов с городами из примера", () -> {
+        step("Проверка билетов на самолет с городами из примера", () -> {
             searchTicketsWithExampleCities
                     .searchedLine();
         });
