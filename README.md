@@ -88,10 +88,10 @@ java "-DconfigFile=notifications/config.json" -jar notifications/allure-notifica
 * `REMOTE_BROWSER_URL`  – адрес удаленного сервера для запуска автотестов.
 
 <h2><img src="https://github.com/Toalra/Diploma/blob/master/src/test/resources/media/logs/Jenkins.svg" wight="30" height="30"/><a>Сборка в </a>
-  <a href="https://jenkins.autotests.cloud/job/dats.team_autotesting_tokareva_aliya"> Jenkins</a></h2>
+  <a href="https://jenkins.autotests.cloud/job/diploma_tokareva"> Jenkins</a></h2>
 <a title="jenkinsReport"><img  src="https://github.com/Toalra/Diploma/blob/master/src/test/resources/media/results/jenkinsCommonResults.png" wight="500" height="500"/></a>
 <h3><a>Overwies в </a>
-<a href="https://jenkins.autotests.cloud/job/dats.team_autotesting_tokareva_aliya/43/allure/">Allure Report</a></h3>
+<a href="https://jenkins.autotests.cloud/job/diploma_tokareva/39/allure/">Allure Report</a></h3>
 <a href=""><img  src="https://github.com/Toalra/Diploma/blob/master/src/test/resources/media/results/jenkinsAllure_diploma.png" wight="500" height="450"/></a>
 
 <h3>Результат выполнения теста</h3>
