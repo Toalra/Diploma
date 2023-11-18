@@ -24,7 +24,7 @@
 <a target="_blank" rel="noopener noreferrer" href="https://github.com/Toalra/Diploma/blob/master/src/test/resources/media/logs/Telegram.svg"><img src="https://github.com/Toalra/Diploma/blob/master/src/test/resources/media/logs/Telegram.svg" wight="40" height="40"/></a>
 <a target="_blank" rel="noopener noreferrer" href="https://github.com/Toalra/Diploma/blob/master/src/test/resources/media/logs/Jira.svg"><img src="https://github.com/Toalra/Diploma/blob/master/src/test/resources/media/logs/Jira.svg" wight="40" height="40"/></a>
 
-* Проект автотестов для компаниия Dats Team написан на языке `Java` с применением фреймворка для автотестирования `Selenide` и `JUnit 5`.
+* Проект автотестов для компании Tutu написан на языке `Java` с применением фреймворка для автотестирования `Selenide` и `JUnit 5`.
 * В качестве сборщика проекта использовался `Gradle`.
 * Удаленный запуск происходит в docker-контейнерах на базе `Selenoid`.
 * Для реадизации удаленного запуска применялся `Jenkins` с формированием отчета в `Allure`.
@@ -56,7 +56,7 @@
 gradle clean diploma_test
 ```
 
-<h3>Запуск тестов на удаленном барузере</h3>
+<h3>Запуск тестов на удаленном браузере</h3>
 Автотеты можно запустить также в терминале на удаленном браузере
 
 ```
