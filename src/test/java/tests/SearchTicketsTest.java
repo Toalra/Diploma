@@ -101,14 +101,14 @@ public class SearchTicketsTest extends TestBase {
                     .train()
                     .stationFrom("Казань")
                     .stationTo("Москва")
-                    .dataTo(tomorrowString)
-                    .searchTrainButton()
-                    .trainOfferCard();
+                    .setDataTo(tomorrowString)
+                    .clickSearchTrainButton()
+                    .clickTrainOfferCard();
         });
         step("Проверка поиска билета на поезд", () -> {
             searchTicketOnTrain
-                    .checkCityTrainDepar("Казань")
-                    .checkCityTrainArrive("Москва");
+                    .checkValueCityTrainDepar("Казань")
+                    .checkValueCityTrainArrive("Москва");
 
         });
     }
@@ -119,14 +119,14 @@ public class SearchTicketsTest extends TestBase {
             searchExpTicketOnTrain
                     .openPage()
                     .train()
-                    .exampleCityTrainFrom()
-                    .exampleCityTrainTo()
-                    .dataTo(tomorrowString)
-                    .searchTrainButton();
+                    .clickExampleCityTrainFrom()
+                    .clickExampleCityTrainTo()
+                    .setDataTo(tomorrowString)
+                    .clickSearchTrainButton();
         });
         step("Проверка билетов на поезд из примера", () ->{
             searchExpTicketOnTrain
-                    .checkExpCityTrain();
+                    .getValueExpCityTrain();
         });
     }
     @Test

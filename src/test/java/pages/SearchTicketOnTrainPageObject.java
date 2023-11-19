@@ -14,17 +14,14 @@ public class SearchTicketOnTrainPageObject {
 
             stationFrom = $(".j-station_input_from"),
             stationTo = $(".j-station_input_to"),
-            searchTrainButton = $(".m-border_inner"),
-            dataTo = $(".j-date_to"),
-
-            trainOfferCard = $("[data-ti='train-offer-card']").$(".o-container-fluid"),
-
-            exampleCityTrainFrom = $(".departure").$(".j-pseudo"),
-            exampleCityTrainTo = $(".arrival").$(".j-pseudo"),
-
-            checkCityTrainDepar = $("[data-ti='card-departure-0']").$("[data-ti='stopover-place']"),
-            checkCityTrainArrive = $("[data-ti='card-arrival-0']").$("[data-ti='stopover-place']"),
-            checkExpCityTrain = $("[data-ti='card-departure-0']").$(".o-text-inline");
+            clickSearchTrainButton = $(".m-border_inner"),
+            setDataTo = $(".j-date_to"),
+            clickTrainOfferCard = $("[data-ti='train-offer-card']").$(".o-container-fluid"),
+            clickExampleCityTrainFrom = $(".departure").$(".j-pseudo"),
+            clickExampleCityTrainTo = $(".arrival").$(".j-pseudo"),
+            checkValueCityTrainDepar = $("[data-ti='card-departure-0']").$("[data-ti='stopover-place']"),
+            checkValueCityTrainArrive = $("[data-ti='card-arrival-0']").$("[data-ti='stopover-place']"),
+            getValueExpCityTrain = $("[data-ti='card-departure-0']").$(".o-text-inline");
 
     public SearchTicketOnTrainPageObject openPage() {
         open("https://www.tutu.ru/");
@@ -42,37 +39,37 @@ public class SearchTicketOnTrainPageObject {
         stationTo.setValue(value);
         return this;
     }
-    public SearchTicketOnTrainPageObject dataTo(String value) {
-        dataTo.setValue(value);
+    public SearchTicketOnTrainPageObject setDataTo(String value) {
+        setDataTo.setValue(value);
         return this;
     }
-    public SearchTicketOnTrainPageObject searchTrainButton() {
-        searchTrainButton.click();
+    public SearchTicketOnTrainPageObject clickSearchTrainButton() {
+        clickSearchTrainButton.click();
         return this;
     }
-    public SearchTicketOnTrainPageObject trainOfferCard() {
-        trainOfferCard.click();
+    public SearchTicketOnTrainPageObject clickTrainOfferCard() {
+        clickTrainOfferCard.click();
         return this;
     }
-    public SearchTicketOnTrainPageObject exampleCityTrainFrom() {
-        exampleCityTrainFrom.click();
+    public SearchTicketOnTrainPageObject clickExampleCityTrainFrom() {
+        clickExampleCityTrainFrom.click();
         return this;
     }
-    public SearchTicketOnTrainPageObject exampleCityTrainTo() {
-        exampleCityTrainTo.click();
+    public SearchTicketOnTrainPageObject clickExampleCityTrainTo() {
+        clickExampleCityTrainTo.click();
         return this;
     }
 
-    public SearchTicketOnTrainPageObject checkCityTrainDepar(String value) {
-        checkCityTrainDepar.shouldHave(text(value));
+    public SearchTicketOnTrainPageObject checkValueCityTrainDepar(String value) {
+        checkValueCityTrainDepar.shouldHave(text(value));
         return this;
     }
-    public SearchTicketOnTrainPageObject checkCityTrainArrive(String value) {
-        checkCityTrainArrive.shouldHave(text(value));
+    public SearchTicketOnTrainPageObject checkValueCityTrainArrive(String value) {
+        checkValueCityTrainArrive.shouldHave(text(value));
         return this;
     }
-    public SearchTicketOnTrainPageObject checkExpCityTrain() {
-        checkExpCityTrain.getValue();
+    public SearchTicketOnTrainPageObject getValueExpCityTrain() {
+        getValueExpCityTrain.getValue();
         return this;
     }
 }
