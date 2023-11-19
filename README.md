@@ -86,7 +86,7 @@ java "-DconfigFile=notifications/config.json" -jar notifications/allure-notifica
 <h3><a href="https://jenkins.autotests.cloud/job/diploma_tokareva/39/allure/">Отчет в Allure</a></h3>
 <a href=""><img  src="https://github.com/Toalra/Diploma/blob/master/src/test/resources/media/results/jenkinsAllure_diploma.png" style="max-width: 100%;"/></a>
 
-<h3>Результат выполнения теста</h3>
+<h3><a href="https://jenkins.autotests.cloud/job/diploma_tokareva/39/allure/#suites">Результат выполнения теста</a></h3>
 <a title="allureResults"><img  src="https://github.com/Toalra/Diploma/blob/master/src/test/resources/media/results/jenkinsAllure_diploma_pased.png" wight=700" height="500"/></a>
 
 <h2><img  src="https://github.com/Toalra/Diploma/blob/master/src/test/resources/media/logs/AllureTestOps.svg" wight="30" height="30"/><a>Интеграция с </a>
