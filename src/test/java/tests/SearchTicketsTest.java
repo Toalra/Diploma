@@ -1,5 +1,6 @@
 package tests;
 
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import pages.SearchTicketOnBusPageObject;
@@ -30,6 +31,7 @@ public class SearchTicketsTest extends TestBase {
     String weekString = week.format(formatter);
 
     @Test
+    @DisplayName("Проверка поиска билета на самолет для указанных городов")
     void searchTickets() {
         step("Поиск билетов на самолет за промежуток времени", () -> {
         searchTickets
@@ -49,6 +51,7 @@ public class SearchTicketsTest extends TestBase {
     }
 
     @Test
+    @DisplayName("Проверка билетов на самолет с добавлением перелета")
     void searchTicketWithFlight() {
         step("Поиск билетов на самолет с перелетом", () -> {
             searchTicketWithFlight
@@ -71,6 +74,7 @@ public class SearchTicketsTest extends TestBase {
     }
 
     @Test
+    @DisplayName("Проверка билетов на самолет после нажатия на город из примера")
     void searchTicketsWithExampleCities() {
         step("Поиск билетов на самолет с городами из примера", () -> {
             searchTicketsWithExampleCities
@@ -89,6 +93,7 @@ public class SearchTicketsTest extends TestBase {
     }
 
     @Test
+    @DisplayName("Проверка поиска билета на поезд для указанных городов")
     void searchTicketOnTrain() {
         step("Поиск билетов на поезд", () -> {
             searchTicketOnTrain
@@ -108,6 +113,7 @@ public class SearchTicketsTest extends TestBase {
         });
     }
     @Test
+    @DisplayName("Проверка билетов на поезд после нажатия на город из примера")
     void searchExpTicketOnTrain() {
         step("Поиск примерных билетов на поезд", () -> {
             searchExpTicketOnTrain
@@ -124,6 +130,7 @@ public class SearchTicketsTest extends TestBase {
         });
     }
     @Test
+    @DisplayName("Проверка найденных билетов на автобус для указанных городов")
     void searchTicketsOnBus() {
         step("Поиск билетов на автобус", () -> {
             searchTicketsOnBus
@@ -141,6 +148,7 @@ public class SearchTicketsTest extends TestBase {
         });
     }
     @Test
+    @DisplayName("Проверка найденных билетов на автобус после нажатия на город из примера")
     void searchTicketBusExp() {
         step("Поик примерных билетов на автобус", () ->{
             searchTicketBusExp
