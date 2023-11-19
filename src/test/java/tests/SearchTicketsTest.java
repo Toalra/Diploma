@@ -173,7 +173,5 @@ public class SearchTicketsTest extends TestBase {
                     .checkCityOfExpBus();
 
         });
-
-
     }
 }
