@@ -2,6 +2,9 @@ package tests;
 
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.logevents.SelenideLogger;
+import config.ConfigReader;
+import config.WebConfig;
+import config.WebDriverConfig;
 import helpers.Attach;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.AfterEach;
@@ -14,11 +17,11 @@ import java.util.Map;
 import static com.codeborne.selenide.Selenide.closeWebDriver;
 
 public class TestBase {
+    private static final WebConfig config = ConfigReader.Instance.read();
     @BeforeAll
     static void beforeAll() {
-        Configuration.baseUrl = "https://www.tutu.ru/";
-        Configuration.browserSize = "1920x1200";
-        Configuration.pageLoadStrategy = "eager";
+        WebDriverConfig webConfigForProject = new WebDriverConfig(config);
+        webConfigForProject.webConfigApply();
 
         Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
 
