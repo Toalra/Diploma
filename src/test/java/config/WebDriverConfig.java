@@ -14,6 +14,7 @@ public class WebDriverConfig {
     }
 
     public void webConfigApply() {
+        Configuration.browser = webConfig.getBrowser().toString();
         Configuration.baseUrl = webConfig.getBaseUrl();
         Configuration.browserVersion = webConfig.getBrowserVersion();
         Configuration.browserSize = webConfig.getBrowserSize();
