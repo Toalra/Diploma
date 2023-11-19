@@ -1,11 +1,9 @@
 package tests;
 
-import config.WebDriverProvider;
-import org.junit.jupiter.api.BeforeEach;
+
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
-import org.openqa.selenium.WebDriver;
 import pages.SearchTicketOnBusPage;
 import pages.SearchTicketOnPlanePage;
 import pages.SearchTicketOnTrainPage;
@@ -33,11 +31,11 @@ public class SearchTicketsTest extends TestBase {
     String tomorrowString = tomorrow.format(formatter);
     String weekString = week.format(formatter);
 
-    private WebDriver driver;
-    @BeforeEach
-    public void startDriver() {
-        driver = new WebDriverProvider().get();
-    }
+//    private WebDriver driver;
+//    @BeforeEach
+//    public void startDriver() {
+//        driver = new WebDriverProvider().get();
+//    }
 
     @Test
     @DisplayName("Проверка поиска билета на самолет для указанных городов")
