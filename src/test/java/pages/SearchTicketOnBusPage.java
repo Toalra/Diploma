@@ -17,7 +17,7 @@ public class SearchTicketOnBusPage {
             clickStationFromBusExp = $("[data-ti='departure-suggest']").$(".o-text-inline"),
             clickStationToBusExp = $("[data-ti='arrival-suggest']").$(".o-text-inline"),
             checkCityBusStation = $("[data-ti='main_title']"),
-            checkCityOfExpBus = $("h1[data-ti='top_schedule_content']");
+            checkCityOfExpBus = $("[data-ti='main_title']");
 
 
     public SearchTicketOnBusPage openPage() {
