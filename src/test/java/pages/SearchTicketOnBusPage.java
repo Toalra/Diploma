@@ -7,7 +7,7 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
-public class SearchTicketOnBusPageObject {
+public class SearchTicketOnBusPage {
 
     SelenideElement
             busTabOpen = $(".tab_bus"),
@@ -22,49 +22,49 @@ public class SearchTicketOnBusPageObject {
             checkCityOfExpBus = $("[data-ti='main_title']");
 
 
-    public SearchTicketOnBusPageObject openPage() {
+    public SearchTicketOnBusPage openPage() {
         open("https://www.tutu.ru/");
         return this;
     }
 
-    public SearchTicketOnBusPageObject busTabOpen() {
+    public SearchTicketOnBusPage busTabOpen() {
         busTabOpen.click();
         return this;
     }
-    public SearchTicketOnBusPageObject busStationSetCityFrom(String value) {
+    public SearchTicketOnBusPage busStationSetCityFrom(String value) {
         busStationSetCityFrom.setValue(value);
         return this;
     }
-    public SearchTicketOnBusPageObject busStationSetCityTo(String value) {
+    public SearchTicketOnBusPage busStationSetCityTo(String value) {
         busStationSetCityTo.setValue(value);
         return this;
     }
-    public SearchTicketOnBusPageObject setDateBus(String value) {
+    public SearchTicketOnBusPage setDateBus(String value) {
         setDateBus.setValue(value);
         return this;
     }
-    public SearchTicketOnBusPageObject clickSearchBusButton() {
+    public SearchTicketOnBusPage clickSearchBusButton() {
         clickSearchBusButton.click();
         return this;
     }
-    public SearchTicketOnBusPageObject clickStationFromBusExp() {
+    public SearchTicketOnBusPage clickStationFromBusExp() {
         clickStationFromBusExp.click();
         return this;
     }
-    public SearchTicketOnBusPageObject clickStationToBusExp() {
+    public SearchTicketOnBusPage clickStationToBusExp() {
         clickStationToBusExp.click();
         return this;
     }
 
-    public SearchTicketOnBusPageObject checkCityBusStationFrom(String value) {
+    public SearchTicketOnBusPage checkCityBusStationFrom(String value) {
         checkCityBusStationFrom.shouldHave(text(value));
         return this;
     }
-    public SearchTicketOnBusPageObject checkCityBusStationTo(String value) {
+    public SearchTicketOnBusPage checkCityBusStationTo(String value) {
         checkCityBusStationTo.shouldHave(text(value));
         return this;
     }
-    public SearchTicketOnBusPageObject checkCityOfExpBus() {
+    public SearchTicketOnBusPage checkCityOfExpBus() {
         checkCityOfExpBus.getValue();
         return this;
     }

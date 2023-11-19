@@ -7,7 +7,7 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
-public class SearchTicketOnPlanePageObject {
+public class SearchTicketOnPlanePage {
 
     SelenideElement
             clickAviaTab =  $(".tab_avia"),
@@ -27,77 +27,77 @@ public class SearchTicketOnPlanePageObject {
             clickExampleCityTo = $(".j-city_to_pseudo_container").$(".j-pseudo"),
             checkValueCities = $(".o-text-inline");
 
-    public SearchTicketOnPlanePageObject openPage() {
+    public SearchTicketOnPlanePage openPage() {
         open("https://www.tutu.ru/");
         return this;
     }
 
-    public SearchTicketOnPlanePageObject clickAviaTab() {
+    public SearchTicketOnPlanePage clickAviaTab() {
         clickAviaTab.click();
         return this;
     }
-    public SearchTicketOnPlanePageObject setValueCityFrom(String value) {
+    public SearchTicketOnPlanePage setValueCityFrom(String value) {
         setValueCityFrom.setValue(value);
         return this;
     }
-    public SearchTicketOnPlanePageObject setValueCityTo(String value) {
+    public SearchTicketOnPlanePage setValueCityTo(String value) {
         setValueCityTo.setValue(value);
         return this;
     }
-    public SearchTicketOnPlanePageObject setDataFrom(String value) {
+    public SearchTicketOnPlanePage setDataFrom(String value) {
         setDataFrom.setValue(value);
         return this;
     }
-    public SearchTicketOnPlanePageObject setDataBack(String value) {
+    public SearchTicketOnPlanePage setDataBack(String value) {
         setDataBack.setValue(value);
         setDataBack.pressEnter();
         return this;
     }
-    public SearchTicketOnPlanePageObject searchButtonClick() {
+    public SearchTicketOnPlanePage searchButtonClick() {
         searchButtonClick.click();
         return this;
     }
-    public SearchTicketOnPlanePageObject chooseFoundTicket() {
+    public SearchTicketOnPlanePage chooseFoundTicket() {
         chooseFoundTicket.click();
         return this;
     }
-    public SearchTicketOnPlanePageObject setAddFlightCityFrom(String value) {
+    public SearchTicketOnPlanePage setAddFlightCityFrom(String value) {
         setAddFlightCityFrom.click();
         setAddFlightCityFrom.setValue(value);
         return this;
     }
-    public SearchTicketOnPlanePageObject setAddFlightCityTo(String value) {
+    public SearchTicketOnPlanePage setAddFlightCityTo(String value) {
         setAddFlightCityTo.click();
         setAddFlightCityTo.setValue(value);
         return this;
     }
-    public SearchTicketOnPlanePageObject clickAddFlight() {
+    public SearchTicketOnPlanePage clickAddFlight() {
         clickAddFlight.click();
         return this;
     }
-    public SearchTicketOnPlanePageObject setAddFlightData(String value) {
+    public SearchTicketOnPlanePage setAddFlightData(String value) {
         setAddFlightData.setValue(value);
         setAddFlightData.pressEnter();
         return this;
     }
-    public SearchTicketOnPlanePageObject getValueSearchedLine() {
+    public SearchTicketOnPlanePage getValueSearchedLine() {
         getValueSearchedLine.getValue();
         return this;
     }
-    public SearchTicketOnPlanePageObject clickExampleCityFrom() {
+    public SearchTicketOnPlanePage clickExampleCityFrom() {
         clickExampleCityFrom.click();
         return this;
     }
-    public SearchTicketOnPlanePageObject clickExampleCityTo() {
+    public SearchTicketOnPlanePage clickExampleCityTo() {
         clickExampleCityTo.click();
         return this;
     }
 
-    public SearchTicketOnPlanePageObject checkResultLineCities(String value) {
+    public SearchTicketOnPlanePage checkResultLineCities(String value) {
         checkResultLineCities.shouldHave(text(value));
         return this;
     }
-    public SearchTicketOnPlanePageObject checkValueCities(String value) {
+    public SearchTicketOnPlanePage checkValueCities(String value) {
         checkValueCities.shouldHave(text(value));
         return this;
     }

@@ -3,9 +3,9 @@ package tests;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
-import pages.SearchTicketOnBusPageObject;
-import pages.SearchTicketOnPlanePageObject;
-import pages.SearchTicketOnTrainPageObject;
+import pages.SearchTicketOnBusPage;
+import pages.SearchTicketOnPlanePage;
+import pages.SearchTicketOnTrainPage;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
@@ -14,14 +14,14 @@ import static io.qameta.allure.Allure.step;
 
 @Tag("go_test")
 public class SearchTicketsTest extends TestBase {
-    SearchTicketOnPlanePageObject searchTickets = new SearchTicketOnPlanePageObject();
-    SearchTicketOnPlanePageObject searchChildTickets = new SearchTicketOnPlanePageObject();
-    SearchTicketOnPlanePageObject searchTicketWithFlight = new SearchTicketOnPlanePageObject();
-    SearchTicketOnPlanePageObject searchTicketsWithExampleCities = new SearchTicketOnPlanePageObject();
-    SearchTicketOnTrainPageObject searchTicketOnTrain = new SearchTicketOnTrainPageObject();
-    SearchTicketOnTrainPageObject searchExpTicketOnTrain = new SearchTicketOnTrainPageObject();
-    SearchTicketOnBusPageObject searchTicketsOnBus = new SearchTicketOnBusPageObject();
-    SearchTicketOnBusPageObject searchTicketBusExp = new SearchTicketOnBusPageObject();
+    SearchTicketOnPlanePage searchTickets = new SearchTicketOnPlanePage();
+    SearchTicketOnPlanePage searchChildTickets = new SearchTicketOnPlanePage();
+    SearchTicketOnPlanePage searchTicketWithFlight = new SearchTicketOnPlanePage();
+    SearchTicketOnPlanePage searchTicketsWithExampleCities = new SearchTicketOnPlanePage();
+    SearchTicketOnTrainPage searchTicketOnTrain = new SearchTicketOnTrainPage();
+    SearchTicketOnTrainPage searchExpTicketOnTrain = new SearchTicketOnTrainPage();
+    SearchTicketOnBusPage searchTicketsOnBus = new SearchTicketOnBusPage();
+    SearchTicketOnBusPage searchTicketBusExp = new SearchTicketOnBusPage();
 
     LocalDate today = LocalDate.now();
     LocalDate tomorrow = today.plusDays(1);

@@ -7,7 +7,7 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
-public class SearchTicketOnTrainPageObject {
+public class SearchTicketOnTrainPage {
 
     SelenideElement
             train = $(".tab_train"),
@@ -23,52 +23,52 @@ public class SearchTicketOnTrainPageObject {
             checkValueCityTrainArrive = $("[data-ti='card-arrival-0']").$("[data-ti='stopover-place']"),
             getValueExpCityTrain = $("[data-ti='card-departure-0']").$(".o-text-inline");
 
-    public SearchTicketOnTrainPageObject openPage() {
+    public SearchTicketOnTrainPage openPage() {
         open("https://www.tutu.ru/");
         return this;
     }
-    public SearchTicketOnTrainPageObject train() {
+    public SearchTicketOnTrainPage train() {
         train.click();
         return this;
     }
-    public SearchTicketOnTrainPageObject stationFrom(String value) {
+    public SearchTicketOnTrainPage stationFrom(String value) {
         stationFrom.setValue(value);
         return this;
     }
-    public SearchTicketOnTrainPageObject stationTo(String value) {
+    public SearchTicketOnTrainPage stationTo(String value) {
         stationTo.setValue(value);
         return this;
     }
-    public SearchTicketOnTrainPageObject setDataTo(String value) {
+    public SearchTicketOnTrainPage setDataTo(String value) {
         setDataTo.setValue(value);
         return this;
     }
-    public SearchTicketOnTrainPageObject clickSearchTrainButton() {
+    public SearchTicketOnTrainPage clickSearchTrainButton() {
         clickSearchTrainButton.click();
         return this;
     }
-    public SearchTicketOnTrainPageObject clickTrainOfferCard() {
+    public SearchTicketOnTrainPage clickTrainOfferCard() {
         clickTrainOfferCard.click();
         return this;
     }
-    public SearchTicketOnTrainPageObject clickExampleCityTrainFrom() {
+    public SearchTicketOnTrainPage clickExampleCityTrainFrom() {
         clickExampleCityTrainFrom.click();
         return this;
     }
-    public SearchTicketOnTrainPageObject clickExampleCityTrainTo() {
+    public SearchTicketOnTrainPage clickExampleCityTrainTo() {
         clickExampleCityTrainTo.click();
         return this;
     }
 
-    public SearchTicketOnTrainPageObject checkValueCityTrainDepar(String value) {
+    public SearchTicketOnTrainPage checkValueCityTrainDepar(String value) {
         checkValueCityTrainDepar.shouldHave(text(value));
         return this;
     }
-    public SearchTicketOnTrainPageObject checkValueCityTrainArrive(String value) {
+    public SearchTicketOnTrainPage checkValueCityTrainArrive(String value) {
         checkValueCityTrainArrive.shouldHave(text(value));
         return this;
     }
-    public SearchTicketOnTrainPageObject getValueExpCityTrain() {
+    public SearchTicketOnTrainPage getValueExpCityTrain() {
         getValueExpCityTrain.getValue();
         return this;
     }
