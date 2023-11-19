@@ -3,20 +3,17 @@ package config;
 import com.codeborne.selenide.Browser;
 import org.aeonbits.owner.Config;
 
-import static org.openqa.selenium.logging.LogType.BROWSER;
-import static org.openqa.selenium.remote.CapabilityType.BROWSER_VERSION;
-
 @Config.Sources({
         "classpath:${env}.properties"
 })
 
 public interface WebConfig extends Config {
     @Key("browser")
-    @DefaultValue(BROWSER)
+    @DefaultValue("CHROME")
     Browser getBrowser();
 
     @Key("browserVersion")
-    @DefaultValue(BROWSER_VERSION)
+    @DefaultValue("100.0")
     String getBrowserVersion();
 
     @Key("browserSize")

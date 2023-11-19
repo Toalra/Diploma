@@ -1,5 +1,6 @@
 package config;
 
-//public enum Browser {
-//    CHROME,FIREFOX, OPERA
-//}
+public enum Browser {
+    CHROME,
+    FIREFOX
+}
