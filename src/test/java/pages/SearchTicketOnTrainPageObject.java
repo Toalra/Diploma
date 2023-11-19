@@ -2,7 +2,6 @@ package pages;
 
 
 import com.codeborne.selenide.SelenideElement;
-import org.junit.jupiter.api.DisplayName;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$;
@@ -27,13 +26,10 @@ public class SearchTicketOnTrainPageObject {
             checkCityTrainArrive = $("[data-ti='card-arrival-0']").$("[data-ti='stopover-place']"),
             checkExpCityTrain = $("[data-ti='card-departure-0']").$(".o-text-inline");
 
-
-    @DisplayName("Общее")
     public SearchTicketOnTrainPageObject openPage() {
         open("https://www.tutu.ru/");
         return this;
     }
-    @DisplayName("Поезд")
     public SearchTicketOnTrainPageObject train() {
         train.click();
         return this;
@@ -67,7 +63,6 @@ public class SearchTicketOnTrainPageObject {
         return this;
     }
 
-    @DisplayName("Проверки")
     public SearchTicketOnTrainPageObject checkCityTrainDepar(String value) {
         checkCityTrainDepar.shouldHave(text(value));
         return this;

@@ -2,7 +2,6 @@ package pages;
 
 
 import com.codeborne.selenide.SelenideElement;
-import org.junit.jupiter.api.DisplayName;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$;
@@ -29,14 +28,11 @@ public class SearchTicketOnPlanePageObject {
             exampleCityTo = $(".j-city_to_pseudo_container").$(".j-pseudo"),
             checkCities = $(".o-text-inline");
 
-
-    @DisplayName("Общее")
     public SearchTicketOnPlanePageObject openPage() {
         open("https://www.tutu.ru/");
         return this;
     }
 
-    @DisplayName("Самолет")
     public SearchTicketOnPlanePageObject avia() {
         avia.click();
         return this;
@@ -98,8 +94,6 @@ public class SearchTicketOnPlanePageObject {
         return this;
     }
 
-
-    @DisplayName("Проверки")
     public SearchTicketOnPlanePageObject resultLine(String value) {
         resultLine.shouldHave(text(value));
         return this;
