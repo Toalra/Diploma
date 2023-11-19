@@ -10,17 +10,16 @@ import static com.codeborne.selenide.Selenide.open;
 public class SearchTicketOnBusPageObject {
 
     SelenideElement
-            bus = $(".tab_bus"),
-            busStationFrom = $("[data-ti='departure-suggest']").$(".o-input"),
-            busStationTo = $("[data-ti='arrival-suggest']").$(".o-input"),
-            searchBusButton = $(".o-button-expanded"),
-            dateBus = $(".o-dateinput"),
-            stationFromBusExp = $("[data-ti='departure-suggest']").$(".o-text-inline"),
-            stationToBusExp = $("[data-ti='arrival-suggest']").$(".o-text-inline"),
-
-            checkCityStartBus = $("[data-ti='startPlace']"),
-            checkCityEndBus = $("[data-ti='endPlace']"),
-            checkCityExpBus = $("[data-ti='main_title']");
+            busTabOpen = $(".tab_bus"),
+            busStationSetCityFrom = $("[data-ti='departure-suggest']").$(".o-input"),
+            busStationSetCityTo = $("[data-ti='arrival-suggest']").$(".o-input"),
+            clickSearchBusButton = $(".o-button-expanded"),
+            setDateBus = $(".o-dateinput"),
+            clickStationFromBusExp = $("[data-ti='departure-suggest']").$(".o-text-inline"),
+            clickStationToBusExp = $("[data-ti='arrival-suggest']").$(".o-text-inline"),
+            checkCityBusStationFrom = $("[data-ti='startPlace']"),
+            checkCityBusStationTo = $("[data-ti='endPlace']"),
+            checkCityOfExpBus = $("[data-ti='main_title']");
 
 
     public SearchTicketOnBusPageObject openPage() {
@@ -28,45 +27,45 @@ public class SearchTicketOnBusPageObject {
         return this;
     }
 
-    public SearchTicketOnBusPageObject bus() {
-        bus.click();
+    public SearchTicketOnBusPageObject busTabOpen() {
+        busTabOpen.click();
         return this;
     }
-    public SearchTicketOnBusPageObject busStationFrom(String value) {
-        busStationFrom.setValue(value);
+    public SearchTicketOnBusPageObject busStationSetCityFrom(String value) {
+        busStationSetCityFrom.setValue(value);
         return this;
     }
-    public SearchTicketOnBusPageObject busStationTo(String value) {
-        busStationTo.setValue(value);
+    public SearchTicketOnBusPageObject busStationSetCityTo(String value) {
+        busStationSetCityTo.setValue(value);
         return this;
     }
-    public SearchTicketOnBusPageObject dateBus(String value) {
-        dateBus.setValue(value);
+    public SearchTicketOnBusPageObject setDateBus(String value) {
+        setDateBus.setValue(value);
         return this;
     }
-    public SearchTicketOnBusPageObject searchBusButton() {
-        searchBusButton.click();
+    public SearchTicketOnBusPageObject clickSearchBusButton() {
+        clickSearchBusButton.click();
         return this;
     }
-    public SearchTicketOnBusPageObject stationFromBusExp() {
-        stationFromBusExp.click();
+    public SearchTicketOnBusPageObject clickStationFromBusExp() {
+        clickStationFromBusExp.click();
         return this;
     }
-    public SearchTicketOnBusPageObject stationToBusExp() {
-        stationToBusExp.click();
+    public SearchTicketOnBusPageObject clickStationToBusExp() {
+        clickStationToBusExp.click();
         return this;
     }
 
-    public SearchTicketOnBusPageObject checkCityStartBus(String value) {
-        checkCityStartBus.shouldHave(text(value));
+    public SearchTicketOnBusPageObject checkCityBusStationFrom(String value) {
+        checkCityBusStationFrom.shouldHave(text(value));
         return this;
     }
-    public SearchTicketOnBusPageObject checkCityEndBus(String value) {
-        checkCityEndBus.shouldHave(text(value));
+    public SearchTicketOnBusPageObject checkCityBusStationTo(String value) {
+        checkCityBusStationTo.shouldHave(text(value));
         return this;
     }
-    public SearchTicketOnBusPageObject checkCityExpBus() {
-        checkCityExpBus.getValue();
+    public SearchTicketOnBusPageObject checkCityOfExpBus() {
+        checkCityOfExpBus.getValue();
         return this;
     }
 }
