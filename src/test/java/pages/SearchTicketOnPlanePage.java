@@ -13,10 +13,10 @@ public class SearchTicketOnPlanePage {
             clickAviaTab =  $(".tab_avia"),
             setValueCityFrom = $(".j-city_from"),
             setValueCityTo = $(".j-city_to"),
-            searchButtonClick = $(".button_wrp"),
+            clickOnSearchButton = $(".button_wrp"),
             setDataFrom = $(".j-date_from"),
             setDataBack = $(".j-date_back"),
-            chooseFoundTicket = $(".o-container-fluid"),
+            clickOnFoundTicket = $(".o-container-fluid"),
             checkResultLineCities = $(".o-text-inline"),
             getValueSearchedLine = $("[data-ti='searchPanel']").$(".o-text-headerSmall-md"),
             setAddFlightCityFrom = $(".j-last_row").$(".j-city_from"),
@@ -53,12 +53,12 @@ public class SearchTicketOnPlanePage {
         setDataBack.pressEnter();
         return this;
     }
-    public SearchTicketOnPlanePage searchButtonClick() {
-        searchButtonClick.click();
+    public SearchTicketOnPlanePage clickOnSearchButton() {
+        clickOnSearchButton.click();
         return this;
     }
-    public SearchTicketOnPlanePage chooseFoundTicket() {
-        chooseFoundTicket.click();
+    public SearchTicketOnPlanePage clickOnFoundTicket() {
+        clickOnFoundTicket.click();
         return this;
     }
     public SearchTicketOnPlanePage setAddFlightCityFrom(String value) {
