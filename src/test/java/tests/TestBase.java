@@ -5,16 +5,19 @@ import com.codeborne.selenide.logevents.SelenideLogger;
 import config.ConfigReader;
 import config.WebConfig;
 import config.WebDriverConfig;
+import config.WebDriverProvider;
 import helpers.Attach;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
+import org.openqa.selenium.WebDriver;
 
 import static com.codeborne.selenide.Selenide.closeWebDriver;
 
 public class TestBase {
     private static final WebConfig config = ConfigReader.Instance.read();
+    private WebDriver driver;
     @BeforeAll
     static void beforeAll() {
         WebDriverConfig webConfigForProject = new WebDriverConfig(config);
@@ -35,6 +38,10 @@ public class TestBase {
     @BeforeEach
     void addListener() {
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
+    }
+    @BeforeEach
+    public void startDriver() {
+        driver = new WebDriverProvider().get();
     }
 
     @AfterEach
