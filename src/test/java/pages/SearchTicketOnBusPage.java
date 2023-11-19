@@ -17,8 +17,8 @@ public class SearchTicketOnBusPage {
             clickStationFromBusExp = $("[data-ti='departure-suggest']").$(".o-text-inline"),
             clickStationToBusExp = $("[data-ti='arrival-suggest']").$(".o-text-inline"),
             checkCityBusStation = $("[data-ti='main_title']"),
-            checkCityOfExpBusFrom = $("[data-ti='search_form']").$("[data-ti='departure']"),
-            checkCityOfExpBusTo = $("[data-ti='search_form']").$("[data-ti='arrival']");
+            checkCityOfExpBusFrom = $("[data-ti='top_schedule_content']").$(".o-text-header");
+            //checkCityOfExpBusTo = $("[data-ti='search_form']").$("[data-ti='arrival']");
 
 
     public SearchTicketOnBusPage openPage() {
@@ -63,8 +63,8 @@ public class SearchTicketOnBusPage {
         checkCityOfExpBusFrom.getValue();
         return this;
     }
-    public SearchTicketOnBusPage checkCityOfExpBusTo() {
-        checkCityOfExpBusTo.getValue();
-        return this;
-    }
+//    public SearchTicketOnBusPage checkCityOfExpBusTo() {
+//        checkCityOfExpBusTo.getValue();
+//        return this;
+//    }
 }
