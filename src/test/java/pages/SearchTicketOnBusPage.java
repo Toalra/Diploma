@@ -23,7 +23,7 @@ public class SearchTicketOnBusPage {
 
 
     public SearchTicketOnBusPage openPage() {
-        open("https://www.tutu.ru/");
+        open("");
         return this;
     }
 

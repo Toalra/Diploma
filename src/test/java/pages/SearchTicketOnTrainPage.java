@@ -10,10 +10,9 @@ import static com.codeborne.selenide.Selenide.open;
 public class SearchTicketOnTrainPage {
 
     SelenideElement
-            train = $(".tab_train"),
-
-            stationFrom = $(".j-station_input_from"),
-            stationTo = $(".j-station_input_to"),
+            openTrainTab = $(".tab_train"),
+            setStationFrom = $(".j-station_input_from"),
+            setStationTo = $(".j-station_input_to"),
             clickSearchTrainButton = $(".m-border_inner"),
             setDataTo = $(".j-date_to"),
             clickTrainOfferCard = $("[data-ti='train-offer-card']").$(".o-container-fluid"),
@@ -24,19 +23,19 @@ public class SearchTicketOnTrainPage {
             getValueExpCityTrain = $("[data-ti='card-departure-0']").$(".o-text-inline");
 
     public SearchTicketOnTrainPage openPage() {
-        open("https://www.tutu.ru/");
+        open("");
         return this;
     }
-    public SearchTicketOnTrainPage train() {
-        train.click();
+    public SearchTicketOnTrainPage openTrainTab() {
+        openTrainTab.click();
         return this;
     }
-    public SearchTicketOnTrainPage stationFrom(String value) {
-        stationFrom.setValue(value);
+    public SearchTicketOnTrainPage setStationFrom(String value) {
+        setStationFrom.setValue(value);
         return this;
     }
-    public SearchTicketOnTrainPage stationTo(String value) {
-        stationTo.setValue(value);
+    public SearchTicketOnTrainPage setStationTo(String value) {
+        setStationTo.setValue(value);
         return this;
     }
     public SearchTicketOnTrainPage setDataTo(String value) {

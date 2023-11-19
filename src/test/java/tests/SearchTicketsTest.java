@@ -98,9 +98,9 @@ public class SearchTicketsTest extends TestBase {
         step("Поиск билетов на поезд", () -> {
             searchTicketOnTrain
                     .openPage()
-                    .train()
-                    .stationFrom("Казань")
-                    .stationTo("Москва")
+                    .openTrainTab()
+                    .setStationFrom("Казань")
+                    .setStationTo("Москва")
                     .setDataTo(tomorrowString)
                     .clickSearchTrainButton()
                     .clickTrainOfferCard();
@@ -118,7 +118,7 @@ public class SearchTicketsTest extends TestBase {
         step("Поиск примерных билетов на поезд", () -> {
             searchExpTicketOnTrain
                     .openPage()
-                    .train()
+                    .openTrainTab()
                     .clickExampleCityTrainFrom()
                     .clickExampleCityTrainTo()
                     .setDataTo(tomorrowString)

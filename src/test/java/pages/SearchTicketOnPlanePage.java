@@ -28,7 +28,7 @@ public class SearchTicketOnPlanePage {
             checkValueCities = $(".o-text-inline");
 
     public SearchTicketOnPlanePage openPage() {
-        open("https://www.tutu.ru/");
+        open("");
         return this;
     }
 
