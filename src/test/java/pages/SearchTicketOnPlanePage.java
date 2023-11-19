@@ -16,7 +16,7 @@ public class SearchTicketOnPlanePage {
             clickOnSearchButton = $(".button_wrp"),
             setDataFrom = $(".j-date_from"),
             setDataBack = $(".j-date_back"),
-            clickOnFoundTicket = $("[data-ti='offer-card']").$("[data-ti='route-0']"),
+            clickOnFoundTicket = $("[data-ti='order-button-outer']").$(".order-group-element"),
             checkResultLineCities = $(".o-text-inline"),
             getValueSearchedLine = $("[data-ti='searchPanel']").$(".o-text-headerSmall-md"),
             setAddFlightCityFrom = $(".j-last_row").$(".j-city_from"),
