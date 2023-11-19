@@ -19,7 +19,7 @@ public class TestBase {
     @BeforeAll
     static void beforeAll() {
         WebDriverConfig webConfigForProject = new WebDriverConfig(config);
-        webConfigForProject.webConfigApply();
+        webConfigForProject.applyWebConfig();
 
         Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
     }

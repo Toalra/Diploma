@@ -17,16 +17,15 @@ public class SearchTicketOnBusPage {
             setDateBus = $(".o-dateinput"),
             clickStationFromBusExp = $("[data-ti='departure-suggest']").$(".o-text-inline"),
             clickStationToBusExp = $("[data-ti='arrival-suggest']").$(".o-text-inline"),
-            checkCityBusStationFrom = $("[data-ti='startPlace']"),
-            checkCityBusStationTo = $("[data-ti='endPlace']"),
-            checkCityOfExpBus = $("[data-ti='main_title']");
+            checkCityBusStationFrom = $("[data-ti='departure']"),
+            checkCityBusStationTo = $("[data-ti='arrival']"),
+            checkCityOfExpBus = $("[data-ti='top_schedule_content']");
 
 
     public SearchTicketOnBusPage openPage() {
         open("");
         return this;
     }
-
     public SearchTicketOnBusPage busTabOpen() {
         busTabOpen.click();
         return this;

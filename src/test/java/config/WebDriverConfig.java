@@ -3,7 +3,6 @@ package config;
 import com.codeborne.selenide.Configuration;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
-
 import java.util.Map;
 
 public class WebDriverConfig {
@@ -13,7 +12,7 @@ public class WebDriverConfig {
         this.webConfig = webConfig;
     }
 
-    public void webConfigApply() {
+    public void applyWebConfig() {
         Configuration.baseUrl = webConfig.getBaseUrl();
         Configuration.browser = webConfig.getBrowser().toString();
         Configuration.browserVersion = webConfig.getBrowserVersion();
@@ -31,5 +30,4 @@ public class WebDriverConfig {
             Configuration.browserCapabilities = capabilities;
         }
     }
-
 }
