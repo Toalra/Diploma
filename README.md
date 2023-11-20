@@ -58,6 +58,7 @@ gradle clean diploma_test
 
 <h3>Запуск тестов на удаленном браузере</h3>
 Запуск автотестов при переопределенных параметров запуска
+
 ```
 clean
 main -DremoteUrl=${SELENOID_URL}
