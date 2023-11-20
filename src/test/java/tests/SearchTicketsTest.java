@@ -161,7 +161,6 @@ public class SearchTicketsTest extends TestBase {
         step("Проверка найденных билетов на автобус из примера", () -> {
             searchTicketBusExp
                     .checkCityOfExpBusFrom();
-                 //   .checkCityOfExpBusTo();
 
         });
     }
