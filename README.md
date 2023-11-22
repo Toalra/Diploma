@@ -84,7 +84,7 @@ java "-DconfigFile=notifications/config.json" -jar notifications/allure-notifica
 
 <h2><img src="https://github.com/Toalra/Diploma/blob/master/src/test/resources/media/logs/Jenkins.svg" wight="30" height="30"/><a>Сборка в </a><a href="https://jenkins.autotests.cloud/job/diploma_tokareva">Jenkins </a></h2>
 <a title="jenkinsReport"><img  src="https://github.com/Toalra/Diploma/blob/master/src/test/resources/media/results/jenkinsCommonResults.png" style="max-width: 100%;"/></a>
-<h3><img =src"https://github.com/Toalra/Diploma/raw/master/src/test/resources/media/logs/Allure_Report.svg" wight="30" height="30"/> <a>Отчет</a><a href="https://jenkins.autotests.cloud/job/diploma_tokareva/39/allure/"> в Allure</a></h3>
+<h3><img =src"https://github.com/Toalra/Diploma/blob/master/src/test/resources/media/logs/Allure_Report.svg" wight="30" height="30"/> <a>Отчет</a><a href="https://jenkins.autotests.cloud/job/diploma_tokareva/39/allure/"> в Allure</a></h3>
 <a href=""><img  src="https://github.com/Toalra/Diploma/blob/master/src/test/resources/media/results/jenkinsAllure_diploma.png" style="max-width: 100%;"/></a>
 
 <h3><a href="https://jenkins.autotests.cloud/job/diploma_tokareva/39/allure/#suites">Результат выполнения теста</a></h3>
