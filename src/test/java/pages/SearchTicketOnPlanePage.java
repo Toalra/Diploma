@@ -10,95 +10,95 @@ import static com.codeborne.selenide.Selenide.open;
 public class SearchTicketOnPlanePage {
 
     SelenideElement
-            clickAviaTab =  $(".tab_avia"),
-            setValueCityFrom = $(".j-city_from"),
-            setValueCityTo = $(".j-city_to"),
-            clickOnSearchButton = $(".button_wrp"),
-            setDataFrom = $(".j-date_from"),
-            setDataBack = $(".j-date_back"),
-            clickOnFoundTicket = $("[data-ti='departure']"),
-            checkResultLineCities = $(".o-text-inline"),
-            getValueSearchedLine = $("[data-ti='searchPanel']").$(".o-text-headerSmall-md"),
-            setAddFlightCityFrom = $(".j-last_row").$(".j-city_from"),
-            setAddFlightCityTo = $(".j-last_row").$(".j-city_to"),
-            setAddFlightData = $(".j-last_row").$(".j-date_input"),
-            clickAddFlight = $(".j-add_flight_button"),
-            clickExampleCityFrom = $(".j-city_from_pseudo_container").$(".j-pseudo"),
-            clickExampleCityTo = $(".j-city_to_pseudo_container").$(".j-pseudo"),
-            checkValueCities = $(".o-text-inline");
+            aviaTabClick =  $(".tab_avia"),
+            valueCityFromSet = $(".j-city_from"),
+            valueCityToSet = $(".j-city_to"),
+            searchButtonClickOn = $(".button_wrp"),
+            dataFromSet = $(".j-date_from"),
+            dataBackSet = $(".j-date_back"),
+            foundTicketClickOn = $("[data-ti='departure']"),
+            resultLineCitiesCheck = $(".o-text-inline"),
+            valueSearchedLineGet = $("[data-ti='searchPanel']").$(".o-text-headerSmall-md"),
+            addFlightCityFromSet = $(".j-last_row").$(".j-city_from"),
+            addFlightCityToSet = $(".j-last_row").$(".j-city_to"),
+            addFlightDataSet = $(".j-last_row").$(".j-date_input"),
+            addFlightClick = $(".j-add_flight_button"),
+            exampleCityFromClick = $(".j-city_from_pseudo_container").$(".j-pseudo"),
+            exampleCityToClick = $(".j-city_to_pseudo_container").$(".j-pseudo"),
+            valueCitiesCheck = $(".o-text-inline");
 
     public SearchTicketOnPlanePage openPage() {
         open("");
         return this;
     }
 
-    public SearchTicketOnPlanePage clickAviaTab() {
-        clickAviaTab.click();
+    public SearchTicketOnPlanePage aviaTabClick() {
+        aviaTabClick.click();
         return this;
     }
-    public SearchTicketOnPlanePage setValueCityFrom(String value) {
-        setValueCityFrom.setValue(value);
+    public SearchTicketOnPlanePage valueCityFromSet(String value) {
+        valueCityFromSet.setValue(value);
         return this;
     }
-    public SearchTicketOnPlanePage setValueCityTo(String value) {
-        setValueCityTo.setValue(value);
+    public SearchTicketOnPlanePage valueCityToSet(String value) {
+        valueCityToSet.setValue(value);
         return this;
     }
-    public SearchTicketOnPlanePage setDataFrom(String value) {
-        setDataFrom.setValue(value);
+    public SearchTicketOnPlanePage dataFromSet(String value) {
+        dataFromSet.setValue(value);
         return this;
     }
-    public SearchTicketOnPlanePage setDataBack(String value) {
-        setDataBack.setValue(value);
-        setDataBack.pressEnter();
+    public SearchTicketOnPlanePage dataBackSet(String value) {
+        dataBackSet.setValue(value);
+        dataBackSet.pressEnter();
         return this;
     }
-    public SearchTicketOnPlanePage clickOnSearchButton() {
-        clickOnSearchButton.click();
+    public SearchTicketOnPlanePage searchButtonClickOn() {
+        searchButtonClickOn.click();
         return this;
     }
-    public SearchTicketOnPlanePage clickOnFoundTicket() {
-        clickOnFoundTicket.click();
+    public SearchTicketOnPlanePage foundTicketClickOn() {
+        foundTicketClickOn.click();
         return this;
     }
-    public SearchTicketOnPlanePage setAddFlightCityFrom(String value) {
-        setAddFlightCityFrom.click();
-        setAddFlightCityFrom.setValue(value);
+    public SearchTicketOnPlanePage addFlightCityFromSet(String value) {
+        addFlightCityFromSet.click();
+        addFlightCityFromSet.setValue(value);
         return this;
     }
-    public SearchTicketOnPlanePage setAddFlightCityTo(String value) {
-        setAddFlightCityTo.click();
-        setAddFlightCityTo.setValue(value);
+    public SearchTicketOnPlanePage addFlightCityToSet(String value) {
+        addFlightCityToSet.click();
+        addFlightCityToSet.setValue(value);
         return this;
     }
-    public SearchTicketOnPlanePage clickAddFlight() {
-        clickAddFlight.click();
+    public SearchTicketOnPlanePage addFlightClick() {
+        addFlightClick.click();
         return this;
     }
-    public SearchTicketOnPlanePage setAddFlightData(String value) {
-        setAddFlightData.setValue(value);
-        setAddFlightData.pressEnter();
+    public SearchTicketOnPlanePage addFlightDataSet(String value) {
+        addFlightDataSet.setValue(value);
+        addFlightDataSet.pressEnter();
         return this;
     }
-    public SearchTicketOnPlanePage getValueSearchedLine() {
-        getValueSearchedLine.getValue();
+    public SearchTicketOnPlanePage valueSearchedLineGet() {
+        valueSearchedLineGet.getValue();
         return this;
     }
-    public SearchTicketOnPlanePage clickExampleCityFrom() {
-        clickExampleCityFrom.click();
+    public SearchTicketOnPlanePage exampleCityFromClick() {
+        exampleCityFromClick.click();
         return this;
     }
-    public SearchTicketOnPlanePage clickExampleCityTo() {
-        clickExampleCityTo.click();
+    public SearchTicketOnPlanePage exampleCityToClick() {
+        exampleCityToClick.click();
         return this;
     }
 
-    public SearchTicketOnPlanePage checkResultLineCities(String value) {
-        checkResultLineCities.shouldHave(text(value));
+    public SearchTicketOnPlanePage resultLineCitiesCheck(String value) {
+        resultLineCitiesCheck.shouldHave(text(value));
         return this;
     }
-    public SearchTicketOnPlanePage checkValueCities(String value) {
-        checkValueCities.shouldHave(text(value));
+    public SearchTicketOnPlanePage valueCitiesCheck(String value) {
+        valueCitiesCheck.shouldHave(text(value));
         return this;
     }
 

@@ -36,17 +36,17 @@ public class SearchTicketsTest extends TestBase {
         step("Поиск билетов на самолет за промежуток времени", () -> {
         searchTickets
             .openPage()
-            .clickAviaTab()
-            .setValueCityFrom("Казань")
-            .setValueCityTo("Москва")
-            .setDataFrom(tomorrowString)
-            .setDataBack(weekString)
-            .clickOnFoundTicket();
+            .aviaTabClick()
+            .valueCityFromSet("Казань")
+            .valueCityToSet("Москва")
+            .dataFromSet(tomorrowString)
+            .dataBackSet(weekString)
+            .foundTicketClickOn();
         });
 
         step("Проверка найденных билетов на самолет за указанный промежуток времени", () -> {
         searchChildTickets
-            .checkResultLineCities("Казань" + " — " + "Москва");
+            .resultLineCitiesCheck("Казань" + " — " + "Москва");
         });
     }
 
@@ -56,20 +56,20 @@ public class SearchTicketsTest extends TestBase {
         step("Поиск билетов на самолет с перелетом", () -> {
             searchTicketWithFlight
                     .openPage()
-                    .clickAviaTab()
-                    .setValueCityFrom("Казань")
-                    .setValueCityTo("Москва")
-                    .setDataFrom(tomorrowString)
-                    .clickAddFlight()
-                    .setAddFlightCityFrom("Москва")
-                    .setAddFlightCityTo("Казань")
-                    .setAddFlightData(weekString)
-                    .clickOnSearchButton()
-                    .clickOnFoundTicket();
+                    .aviaTabClick()
+                    .valueCityFromSet("Казань")
+                    .valueCityToSet("Москва")
+                    .dataFromSet(tomorrowString)
+                    .addFlightClick()
+                    .addFlightCityFromSet("Москва")
+                    .addFlightCityToSet("Казань")
+                    .addFlightDataSet(weekString)
+                    .searchButtonClickOn()
+                    .foundTicketClickOn();
         });
         step("Проверка билетов на самолет с перелетом", () -> {
             searchTicketWithFlight
-                     .checkValueCities("Казань" + " — " + "Москва");
+                     .valueCitiesCheck("Казань" + " — " + "Москва");
         });
     }
 
@@ -79,16 +79,16 @@ public class SearchTicketsTest extends TestBase {
         step("Поиск билетов на самолет с городами из примера", () -> {
             searchTicketsWithExampleCities
                     .openPage()
-                    .clickAviaTab()
-                    .clickExampleCityFrom()
-                    .clickExampleCityTo()
-                    .setDataFrom(tomorrowString)
-                    .clickOnSearchButton()
-                    .clickOnFoundTicket();;
+                    .aviaTabClick()
+                    .exampleCityFromClick()
+                    .exampleCityToClick()
+                    .dataFromSet(tomorrowString)
+                    .searchButtonClickOn()
+                    .foundTicketClickOn();;
         });
         step("Проверка билетов на самолет с городами из примера", () -> {
             searchTicketsWithExampleCities
-                    .getValueSearchedLine();
+                    .valueSearchedLineGet();
         });
     }
 
@@ -98,17 +98,17 @@ public class SearchTicketsTest extends TestBase {
         step("Поиск билетов на поезд", () -> {
             searchTicketOnTrain
                     .openPage()
-                    .openTrainTab()
-                    .setStationFrom("Казань")
-                    .setStationTo("Москва")
-                    .setDataTo(tomorrowString)
-                    .clickSearchTrainButton()
-                    .clickTrainOfferCard();
+                    .trainTabOpen()
+                    .stationFromSet("Казань")
+                    .stationToSet("Москва")
+                    .dataToSet(tomorrowString)
+                    .searchTrainButtonClick()
+                    .trainOfferCardClick();
         });
         step("Проверка поиска билета на поезд", () -> {
             searchTicketOnTrain
-                    .checkValueCityTrainDepar("Казань")
-                    .checkValueCityTrainArrive("Москва");
+                    .valueCityTrainDeparCheck("Казань")
+                    .valueCityTrainArriveCheck("Москва");
 
         });
     }
@@ -118,15 +118,15 @@ public class SearchTicketsTest extends TestBase {
         step("Поиск примерных билетов на поезд", () -> {
             searchExpTicketOnTrain
                     .openPage()
-                    .openTrainTab()
-                    .clickExampleCityTrainFrom()
-                    .clickExampleCityTrainTo()
-                    .setDataTo(tomorrowString)
-                    .clickSearchTrainButton();
+                    .trainTabOpen()
+                    .exampleCityTrainFromClick()
+                    .exampleCityTrainToClick()
+                    .dataToSet(tomorrowString)
+                    .searchTrainButtonClick();
         });
         step("Проверка билетов на поезд из примера", () ->{
             searchExpTicketOnTrain
-                    .getValueExpCityTrain();
+                    .valueExpCityTrainGet();
         });
     }
     @Test
@@ -135,15 +135,15 @@ public class SearchTicketsTest extends TestBase {
         step("Поиск билетов на автобус", () -> {
             searchTicketsOnBus
                     .openPage()
-                    .openBusTab()
-                    .setBusStationCityFrom("Казань")
-                    .setBusStationCityTo("Москва")
-                    .setDateBus(tomorrowString)
-                    .clickSearchBusButton();
+                    .busTabOpen()
+                    .busStationCityFromSet("Казань")
+                    .busStationCityToSet("Москва")
+                    .dateBusSet(tomorrowString)
+                    .searchBusButtonClick();
         });
         step("Проверка найденных билетов на автобус", () -> {
             searchTicketsOnBus
-                    .checkCityBusStation();
+                    .cityBusStationCheck();
         });
     }
     @Test
@@ -152,15 +152,15 @@ public class SearchTicketsTest extends TestBase {
         step("Поик примерных билетов на автобус", () ->{
             searchTicketBusExp
                     .openPage()
-                    .openBusTab()
-                    .clickStationFromBusExp()
-                    .clickStationToBusExp()
-                    .setDateBus(tomorrowString)
-                    .clickSearchBusButton();
+                    .busTabOpen()
+                    .stationFromBusExpClick()
+                    .stationToBusExpClick()
+                    .dateBusSet(tomorrowString)
+                    .searchBusButtonClick();
         });
         step("Проверка найденных билетов на автобус из примера", () -> {
             searchTicketBusExp
-                    .checkCityOfExpBusFrom();
+                    .cityOfExpBusFromCheck();
 
         });
     }
